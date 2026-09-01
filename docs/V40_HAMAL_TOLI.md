@@ -1,0 +1,2 @@
+# V40 Hamal Toli
+Adds explicit Permanent, Daily/Fatak and Hamal Toli workforce types. Hamal teams have configurable size, a leader, individual members, team attendance and loading/unloading/packing assignments. The owner sees a team summary while member-level records remain available for payroll, audit and eligibility. The future workforce marketplace is not exposed in the UI.

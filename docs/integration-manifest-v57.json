@@ -1,0 +1,70 @@
+{
+  "version": "57.0",
+  "name": "Mannat Workforce OS",
+  "modules": [
+    {
+      "id": "command_centre",
+      "name": "Owner Command Centre",
+      "status": "integrated"
+    },
+    {
+      "id": "worker_360",
+      "name": "Worker 360\u00b0",
+      "status": "integrated"
+    },
+    {
+      "id": "attendance",
+      "name": "Attendance Engine",
+      "status": "integrated"
+    },
+    {
+      "id": "fatak",
+      "name": "Fatak Daily Labour",
+      "status": "integrated"
+    },
+    {
+      "id": "hamal",
+      "name": "Hamal Toli",
+      "status": "integrated"
+    },
+    {
+      "id": "finance",
+      "name": "Advances & Payroll",
+      "status": "integrated"
+    },
+    {
+      "id": "redflag",
+      "name": "Red Flag + NOC",
+      "status": "integrated"
+    },
+    {
+      "id": "association",
+      "name": "Association Command Centre",
+      "status": "integrated"
+    },
+    {
+      "id": "access",
+      "name": "Roles & Permissions",
+      "status": "integrated"
+    },
+    {
+      "id": "language",
+      "name": "English / Hindi",
+      "status": "integrated"
+    }
+  ],
+  "deferred": [
+    "Hardcore labour network (Phase 2)",
+    "Third language"
+  ],
+  "deployment_pending": [
+    "production auth",
+    "biometric/face API",
+    "Aadhaar provider",
+    "hosting/database/backup",
+    "notifications",
+    "offline sync",
+    "security/compliance hardening",
+    "field pilot"
+  ]
+}
