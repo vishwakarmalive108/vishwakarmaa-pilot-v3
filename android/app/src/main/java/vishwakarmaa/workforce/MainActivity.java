@@ -1,7 +1,7 @@
 package com.vishwakarmaa.workforce;
 
 import android.Manifest;
-import android.app.Activity;
+import androidx.fragment.app.FragmentActivity;
 import android.os.Bundle;
 import android.webkit.JavascriptInterface;
 import android.webkit.PermissionRequest;
@@ -17,7 +17,7 @@ import androidx.biometric.BiometricManager;
 import androidx.biometric.BiometricPrompt;
 import androidx.core.content.ContextCompat;
 
-public class MainActivity extends Activity {
+public class MainActivity extends FragmentActivity {
     private WebView web;
 
     @Override public void onCreate(Bundle savedInstanceState) {
