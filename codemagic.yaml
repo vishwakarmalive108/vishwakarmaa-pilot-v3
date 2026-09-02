@@ -1,15 +1,57 @@
 workflows:
-  android-debug:
-    name: Project Vishwakarmaa Android Debug
-    instance_type: linux_x2
-    max_build_duration: 30
+  vishwakarmaa-pilot-v2:
+    name: Vishwakarmaa Factory Attendance Pilot
+    max_build_duration: 60
+    instance_type: mac_mini_m2
+
+    environment:
+      java: 17
 
     scripts:
-      - name: Set Android SDK
-        script: echo "sdk.dir=$ANDROID_SDK_ROOT" > "$CM_BUILD_DIR/android/local.properties"
+      - name: Configure Android SDK
+        script: |
+          set -e
+          echo "sdk.dir=$ANDROID_SDK_ROOT" > "$CM_BUILD_DIR/android/local.properties"
+
+      - name: Prepare Gradle Wrapper
+        script: |
+          set -e
+          cd "$CM_BUILD_DIR/android"
+          gradle wrapper --gradle-version 8.9 --distribution-type bin
+
+      - name: Verify Current App Source
+        script: |
+          set -e
+          cd "$CM_BUILD_DIR/android"
+
+          echo "=== SOURCE CHECK ==="
+          test -f app/src/main/assets/index.html
+
+          echo "=== TITLE CHECK ==="
+          grep -q "Project Vishwakarmaa — Real Pilot Application V41" app/src/main/assets/index.html
+
+          echo "=== REAL PILOT CHECK ==="
+          grep -q "REAL PILOT" app/src/main/assets/index.html
+
+          echo "=== MANNAT NATIVE CHECK ==="
+          grep -q "MannatNative" app/src/main/assets/index.html
+
+          echo "=== SOURCE VERIFIED ==="
+          wc -c app/src/main/assets/index.html
 
       - name: Build Debug APK
-        script: cd "$CM_BUILD_DIR/android" && gradle --no-daemon assembleDebug
+        script: |
+          set -e
+          cd "$CM_BUILD_DIR/android"
+          chmod +x ./gradlew
+          ./gradlew clean assembleDebug --no-daemon
+
+      - name: Verify APK
+        script: |
+          set -e
+          test -f "$CM_BUILD_DIR/android/app/build/outputs/apk/debug/app-debug.apk"
+          echo "SUCCESS: Vishwakarmaa V41 Debug APK created."
+          ls -lh "$CM_BUILD_DIR/android/app/build/outputs/apk/debug/app-debug.apk"
 
     artifacts:
       - android/app/build/outputs/apk/debug/app-debug.apk
