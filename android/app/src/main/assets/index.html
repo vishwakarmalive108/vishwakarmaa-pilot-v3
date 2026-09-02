@@ -1,9 +1,1263 @@
-<!doctype html><html lang="en"><meta name=viewport content="width=device-width,initial-scale=1"><title>Mannat Workforce OS V57</title><style>*{box-sizing:border-box}body{margin:0;background:#f3f5f8;color:#172033;font:14px Arial}.w{max-width:1180px;margin:auto;padding:22px}.top{display:flex;justify-content:space-between;gap:12px}.ey{font-size:10px;color:#778399;font-weight:bold;letter-spacing:2px}.t{font-size:30px;font-weight:900;margin:5px 0}.badge{font-size:9px;font-weight:bold;padding:6px 9px;border-radius:15px;background:#edf1f6}.ok{background:#e5f8ec;color:#15733a}.amber{background:#fff1d6;color:#8a5d00}.hero{margin-top:18px;background:#172033;color:#fff;border-radius:18px;padding:20px}.hero p{color:#c7ceda;font-size:11px;line-height:1.6}.grid{display:grid;grid-template-columns:repeat(5,1fr);gap:10px;margin-top:14px}.card{background:#fff;border:1px solid #e0e6ee;border-radius:14px;padding:14px;margin-top:10px}.module{font-weight:900;font-size:11px}.mini{font-size:10px;color:#778399;line-height:1.5;margin-top:5px}.check{float:right;color:#15733a;font-weight:900}.section{margin-top:22px;font-size:11px;font-weight:900}.row{display:flex;justify-content:space-between;padding:10px 0;border-bottom:1px solid #edf0f4;font-size:10px}.row:last-child{border:0}.flow{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}.flow .card{text-align:center}.arrow{text-align:center;font-size:20px;color:#778399;padding-top:20px}.dark{background:#172033;color:#fff;border-radius:14px;padding:15px;margin-top:12px}.dark .mini{color:#c7ceda}@media(max-width:900px){.grid{grid-template-columns:repeat(3,1fr)}.flow{grid-template-columns:repeat(2,1fr)}}@media(max-width:600px){.grid{grid-template-columns:repeat(2,1fr)}.flow{grid-template-columns:1fr}.w{padding:14px}}</style><body><div class=w>
-<div class=top><div><div class=ey>MANNAT WORKFORCE OS · V57</div><div class=t>Integrated Prototype</div><div class=ey>ONE SYSTEM · ONE WORKER IDENTITY · CONTROLLED ACCESS</div></div><span class="badge ok">10 MODULES CONNECTED</span></div>
-<div class=hero><div class=ey style=color:#9da9bc>V57 INTEGRATION LAYER</div><h3 style=margin:8px 0>From separate modules to one operating system.</h3><p>Worker identity, gate activity, attendance, daily labour, Hamal Toli, money, risk and association governance now have a defined integrated architecture. The next phase is real infrastructure and field validation.</p></div>
-<div class=grid><div class=card><span class=check>✓</span><div class=module>Command Centre</div><div class=mini>Owner operations</div></div><div class=card><span class=check>✓</span><div class=module>Worker 360°</div><div class=mini>Single identity</div></div><div class=card><span class=check>✓</span><div class=module>Attendance</div><div class=mini>Events + OT</div></div><div class=card><span class=check>✓</span><div class=module>Fatak</div><div class=mini>Daily labour</div></div><div class=card><span class=check>✓</span><div class=module>Hamal Toli</div><div class=mini>Team workflow</div></div><div class=card><span class=check>✓</span><div class=module>Finance</div><div class=mini>Advance + payroll</div></div><div class=card><span class=check>✓</span><div class=module>Red Flag</div><div class=mini>NOC gate rule</div></div><div class=card><span class=check>✓</span><div class=module>Association</div><div class=mini>Governance</div></div><div class=card><span class=check>✓</span><div class=module>Permissions</div><div class=mini>Role control</div></div><div class=card><span class=check>✓</span><div class=module>English / हिन्दी</div><div class=mini>User preference</div></div></div>
-<div class=section>CORE WORKFLOW</div><div class=flow><div class=card><b>1 · Identify</b><div class=mini>Worker 360° + Aadhaar status</div></div><div class=card><b>2 · Gate</b><div class=mini>Permanent conflict + NOC check</div></div><div class=card><b>3 · Work</b><div class=mini>Attendance / Fatak / Hamal</div></div><div class=card><b>4 · Settle</b><div class=mini>Advance + payroll + audit</div></div></div>
-<div class=section>GOVERNANCE FLOW</div><div class=card><div class=row><span>System detects rule event</span><b>Automatic</b></div><div class=row><span>Employer-sensitive red flag</span><b>Protected</b></div><div class=row><span>Association update</span><b>System generated</b></div><div class=row><span>Review Committee</span><b>Human decision</b></div><div class=row><span>Penalty / resolution</span><b>Recorded</b></div></div>
-<div class=section>WHAT IS NOT YET PRODUCTION-READY</div><div class=card><div class=row><span>Real authentication & security</span><span class="badge amber">NEXT</span></div><div class=row><span>Biometric / face machine API</span><span class="badge amber">DEVICE</span></div><div class=row><span>Aadhaar verification provider</span><span class="badge amber">API</span></div><div class=row><span>Production hosting / database / backups</span><span class="badge amber">DEPLOY</span></div><div class=row><span>Offline gate sync + notifications</span><span class="badge amber">FIELD</span></div><div class=row><span>Privacy, consent, security hardening</span><span class="badge amber">HARDEN</span></div></div>
-<div class=dark><b>V57 decision</b><div class=mini>The product design is now sufficiently covered to stop adding random modules. From here the highest-value work is production integration, security, real-device connectivity and a controlled pilot with millers.</div></div>
-</div></body></html>
+<!doctype html><html lang="hi"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Project Vishwakarmaa — Real Pilot Application V41</title>
+<style>
+*{box-sizing:border-box}body{margin:0;background:#f5f7fb;color:#182235;font-family:Arial,sans-serif}.app{max-width:430px;margin:auto;min-height:100vh;background:white}
+header{padding:18px;display:flex;justify-content:space-between}.brand{font-size:22px;font-weight:800}.sub,.muted,small{color:#718096;font-size:12px}
+.page{display:none;padding:8px 16px 90px}.page.active{display:block}h1{font-size:25px}.grid{display:grid;grid-template-columns:1fr 1fr;gap:10px}.card{background:#f8f9fc;border-radius:16px;padding:15px}.stat b,.big{font-size:25px}.blue{color:#245fc0}.green{color:#138a57}.red{color:#c52d3c}.orange{color:#b86b00}
+.action{padding:18px 12px;text-align:left;border-radius:16px;background:#eef5ff;font-weight:700}.action span{display:block;font-size:25px;margin-bottom:8px}.action.greenbg{background:#eaf8f1}.action.orangebg{background:#fff5e3}
+.worker{display:flex;align-items:center;gap:10px;padding:12px;background:#f8f9fc;border-radius:14px;margin:8px 0}.avatar{width:48px;height:48px;border-radius:50%;background:#dfe9f8;display:grid;place-items:center;color:#245fc0;font-weight:800}.info{flex:1}.pill{font-size:11px;padding:5px 8px;border-radius:20px;background:#e9f7ef;color:#138a57}.att{padding:10px;border-radius:10px;font-weight:800}.p{background:#dff6ea;color:#087a4a}.a{background:#ffe5e8;color:#b52838}
+.search{width:100%;padding:13px;border:1px solid #dfe5ee;border-radius:13px;margin:8px 0 12px}.row{display:flex;justify-content:space-between;align-items:center;gap:10px}.primary{background:#175fc7;color:white;padding:13px 16px;border-radius:12px;font-weight:800}.notice{padding:14px;border-radius:14px;background:#fff7e4;border:1px solid #f3dfad;margin:8px 0}.list{padding:13px 0;border-bottom:1px solid #edf0f5}
+.bottom{position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:min(430px,100%);background:#fff;border-top:1px solid #e7ebf2;display:grid;grid-template-columns:repeat(5,1fr);padding:8px 5px;z-index:5}.bottom button{background:none;color:#68758a;font-size:10px}.bottom b{display:block;font-size:19px}.bottom .active{color:#175fc7}
+.popup{position:fixed;inset:0;background:#0008;display:none;align-items:center;justify-content:center;padding:20px;z-index:20}.popup.show{display:flex}.modal{background:#fff;border-radius:22px;padding:20px;width:100%;max-width:380px}.flag{color:#b52838;font-weight:900;font-size:18px}
+
+.vk-topbar{display:flex;gap:7px;align-items:center}.vk-iconbtn{border:1px solid #dfe5ee;background:#fff;border-radius:11px;padding:9px 10px;font-size:15px}.vk-status{font-size:10px;padding:5px 8px;border-radius:20px;background:#e9f7ef;color:#138a57;font-weight:800}.vk-status.off{background:#fff5e3;color:#b86b00}.vk-modal{position:fixed;inset:0;background:#0009;display:none;align-items:flex-end;justify-content:center;padding:14px;z-index:100}.vk-modal.show{display:flex}.vk-sheet{background:#fff;border-radius:24px;padding:18px;width:min(430px,100%);max-height:88vh;overflow:auto;box-shadow:0 10px 40px #0003}.vk-sheet h2{margin:0 0 6px}.vk-field{margin:10px 0}.vk-field label{display:block;font-size:12px;color:#718096;font-weight:700;margin-bottom:6px}.vk-field input,.vk-field select,.vk-field textarea{width:100%;padding:13px;border:1px solid #dfe5ee;border-radius:12px;font:inherit;background:#fff}.vk-actions{display:flex;gap:8px;margin-top:14px}.vk-actions button{flex:1}.vk-danger{background:#fff0f1;color:#b52838}.vk-toast{position:fixed;left:50%;bottom:78px;transform:translateX(-50%);background:#182235;color:#fff;padding:11px 15px;border-radius:12px;z-index:120;display:none;font-size:13px;max-width:90%;text-align:center}.vk-toast.show{display:block}.stat span{display:block;color:#718096;font-size:11px;margin-top:3px}.tap{cursor:pointer}.tap:active{transform:scale(.98)}
+</style><link rel="manifest" href="manifest.webmanifest"><meta name="theme-color" content="#175fc7"></head><body>
+<div class="card" style="margin:10px 0;border:2px solid #1565c0">
+  <div class="row"><b>🧪 PILOT MODE</b><span class="pill">LOCAL DATA</span></div>
+  <div class="muted" style="margin-top:6px">Abhi jo data enter karoge woh isi phone par save hoga. Cloud sync production phase mein add hoga.</div>
+</div>
+<div class="app">
+<header><div><div class="brand">Vishwakarmaa</div><div class="sub">Mill Workforce & Hisaab</div><div id="vkStatus" class="vk-status">● Online</div></div><div class="vk-topbar"><button class="vk-iconbtn" onclick="openNotifications()">🔔</button><button class="vk-iconbtn" onclick="openRoleSheet()">👤</button></div></header>
+
+<section id="home" class="page active"><h1>नमस्ते, Owner 👋</h1>
+<div class="card" style="margin:10px 0;border:1px solid #cfe0f5;background:#f7faff"><div class="row"><b>🏭 Vishwakarmaa Pilot</b><span class="pill">LOCAL TEST</span></div><div class="muted" style="margin-top:6px">यह REAL PILOT build है। Local/offline mill workflow इसी phone पर test होगा। Existing Android biometric bridge, camera और GPS readiness उपलब्ध होने पर app उन्हें use कर सकता है; production cloud/WhatsApp/payment/Aadhaar integrations अभी future scope हैं.</div></div><div class="muted">आज की स्थिति</div>
+<div class="grid">
+<button class="card stat tap" style="border:0;text-align:left;width:100%" onclick="show('people')"><small>कर्मचारी</small><b class="blue">32 / 36</b><span class="vk-hint">पूरी सूची देखें ›</span></button>
+<button class="card stat tap" style="border:0;text-align:left;width:100%" onclick="show('hamal')"><small>Hamal</small><b class="orange">10 / 12</b><span class="vk-hint">टीम और काम देखें ›</span></button>
+<button class="card stat tap" style="border:0;text-align:left;width:100%" onclick="show('reja')"><small>Reja / Coolie</small><b class="green">8 / 10</b><span class="vk-hint">हाजिरी देखें ›</span></button>
+<button class="card stat tap" style="border:0;text-align:left;width:100%" onclick="show('redflags')"><small>नए Red Flag</small><b class="red">0</b><span class="vk-hint">Details देखें ›</span></button>
+</div>
+<div class="grid" style="margin-top:12px"><button class="action" onclick="show('attendance')"><span>📅</span>हाजिरी</button><button class="action orangebg" onclick="show('hamal')"><span>👥</span>Hamal का काम</button><button class="action greenbg" onclick="show('hisab')"><span>💰</span>हिसाब</button><button class="action" onclick="show('orders')"><span>📢</span>आदेश</button></div>
+<div class="card" style="margin-top:12px;border:1px solid #d9e2f0;background:#fbfdff"><div class="row"><b>📱 Pilot Device Test</b><span class="pill">READY</span></div><div class="muted" style="margin-top:6px">Android biometric bridge + Camera + GPS readiness</div><div class="grid" style="margin-top:10px"><button class="vk-btn vk-secondary" onclick="vkDeviceTest()">🔐 Device Check</button><button class="vk-btn vk-secondary" onclick="vkCaptureGPS()">📍 GPS Test</button></div></div><div class="grid" style="margin-top:10px"><button class="action" onclick="show('people')"><span>📒</span>पासबुक / लोग</button><button class="action" onclick="show('millprofile')"><span>🏭</span>Mill Profile</button><button class="action" onclick="show('manager')"><span>👨‍💼</span>Manager Link</button><button class="action" onclick="show('more')"><span>🔍</span>और</button></div></section>
+
+<section id="people" class="page"><button class="vk-back" onclick="vkBack()" aria-label="Back">‹ Back</button><h1>लोग</h1><button class="primary" style="width:100%;margin-bottom:10px" onclick="quickAddWorker()">＋ नया Worker / Reja / Coolie</button><input class="search" placeholder="🔍 नाम या मोबाइल से खोजें" oninput="filterPeople(this.value)"><div class="grid"><div class="card"><b>Permanent</b><div class="big">4</div></div><div class="card"><b>Poha Mistri</b><div class="big">10</div></div><div class="card"><b>Reja / Coolie</b><div class="big">10</div></div><div class="card"><b>Hamal</b><div class="big">12</div></div></div><div id="peopleList"></div></section>
+
+
+<section id="reja" class="page"><button class="vk-back" onclick="vkBack()" aria-label="Back">‹ Back</button>
+<h1>Reja / Coolie</h1>
+<div class="row"><span class="muted">आज की हाजिरी</span><b class="green">8 / 10 आए</b></div>
+<div class="notice">आज के 10 Reja / Coolie में से 8 काम पर आए हैं।</div>
+
+<div class="worker"><div class="avatar">RK</div><div class="info"><b>Ramesh Kumar</b><div class="muted">आज</div></div><button class="att p" onclick="this.innerText='✓ आया'">आया</button><button class="att a" onclick="this.innerText='✓ नहीं'">नहीं</button></div>
+<div class="worker"><div class="avatar">ML</div><div class="info"><b>Mohan Lal</b><div class="muted">आज</div></div><button class="att p" onclick="this.innerText='✓ आया'">आया</button><button class="att a" onclick="this.innerText='✓ नहीं'">नहीं</button></div>
+<div class="worker"><div class="avatar">SY</div><div class="info"><b>Suresh Yadav</b><div class="muted">आज</div></div><button class="att p" onclick="this.innerText='✓ आया'">आया</button><button class="att a" onclick="this.innerText='✓ नहीं'">नहीं</button></div>
+
+<div class="card" style="margin-top:12px">
+  <b>नया Reja / Coolie?</b>
+  <div class="muted" style="margin:7px 0 12px">पहले पहचान check होगी, फिर आज की entry होगी।</div>
+  <button class="primary" onclick="alert('नाम + फोटो + मोबाइल + पहचान का simple registration flow अगले build में जोड़ा जाएगा।')">+ नया Reja / Coolie</button>
+</div>
+
+<div class="card" style="margin-top:12px">
+  <b>हिसाब</b>
+  <div class="muted" style="margin-top:7px">हाजिरी, rate, advance और payment से Passbook अपने आप बनेगी।</div>
+</div>
+</section>
+
+<section id="attendance" class="page"><button class="vk-back" onclick="vkBack()" aria-label="Back">‹ Back</button><h1>आज की हाजिरी</h1><div class="row"><span class="muted" id="attDate">आज</span><b class="green" id="attSummary">0 / 0 आए</b></div><div class="notice">एक tap में Present/Absent. बदलाव इसी फोन में save होगा और audit में दर्ज होगा.</div><div id="attList"></div></section>
+
+<section id="profile" class="page"><button class="vk-back" onclick="vkBack()" aria-label="Back">‹ Back</button><h1>वर्कर पासबुक</h1><div class="card"><div class="row"><div><div class="big">Ramesh Kumar</div><div class="muted">Poha Mistri · VK-10452</div></div><div class="avatar">RK</div></div><div class="grid" style="margin-top:14px"><div><small>इस हफ्ते</small><div class="big">4 दिन</div></div><div><small>बाकी</small><div class="big green">₹3,000</div></div></div></div><div class="notice">🟢 आज आया · 08:05 AM</div><div class="list row"><span>कुल कमाई</span><b>₹4,000</b></div><div class="list row"><span>Advance</span><b class="red">₹1,000</b></div><div class="list row"><span>बाकी</span><b class="green">₹3,000</b></div><h3>डायरी</h3><div class="list row"><span>29 Aug · Present</span><b>+₹1,000</b></div><div class="list row"><span>28 Aug · Present</span><b>+₹1,000</b></div><div class="list row"><span>27 Aug · Advance</span><b class="red">−₹500</b></div></section>
+
+<section id="hamal" class="page"><button class="vk-back" onclick="vkBack()" aria-label="Back">‹ Back</button>
+<h1>Hamal का काम</h1><button class="primary" style="width:100%;margin:8px 0" onclick="openHamalTeam()">＋ नई Hamal Team (6–15)</button><div class="card" style="margin-bottom:10px"><b>Team Register</b><div class="muted" style="margin-top:5px">Teams: <b id="hamalTeamCount">0</b> · Members और leader एक ही Mill से linked</div></div>
+<div class="row"><span class="muted">आज · 29 अगस्त</span><b class="orange">10 / 12 आए</b></div>
+
+<div class="grid" style="margin-top:12px">
+  <button class="action" onclick="alert('Hamal Toli चुनें')"><span>👥</span>Hamal Toli<br><small>Toli A · 12 लोग</small></button>
+  <button class="action orangebg" onclick="alert('आज की हाजिरी')"><span>✓</span>हाजिरी<br><small>10 लोग आए</small></button>
+</div>
+
+<div class="card" style="margin-top:12px">
+  <div class="row"><b>आज का काम</b><b class="green">₹1,240</b></div>
+  <div class="muted" style="margin-top:5px">काम डालते ही रकम अपने आप बनेगी।</div>
+</div>
+
+<div class="card" style="margin-top:10px">
+  <div class="row"><b>पोहा काटा</b><b>₹130</b></div>
+  <div class="muted">100 बोरी × ₹1.30</div>
+</div>
+
+<div class="card" style="margin-top:10px">
+  <div class="row"><b>Loading</b><b>₹270</b></div>
+  <div class="muted">300 बोरी × ₹0.90</div>
+</div>
+
+<div class="card" style="margin-top:10px">
+  <div class="row"><b>कांटा + Loading</b><b>₹840</b></div>
+  <div class="muted">400 बोरी × ₹2.10</div>
+</div>
+
+<button class="primary" style="margin-top:12px" onclick="alert('काम चुनें → quantity डालें → रकम अपने आप निकलेगी।')">+ आज का काम डालें</button>
+
+<div class="card" style="margin-top:12px">
+  <h3 style="margin:0 0 8px">आज का हिसाब</h3>
+  <div class="row"><span>कुल काम</span><b>3</b></div>
+  <div class="row" style="margin-top:8px"><span>कुल रकम</span><b class="green">₹1,240</b></div>
+</div>
+
+<div class="card" style="margin-top:12px">
+  <div class="row"><b>📋 Rate List</b><button class="primary" style="padding:8px 10px;font-size:12px" onclick="alert('Owner यहाँ काम और उसका तय rate सेट करेगा।')">देखें</button></div>
+  <div class="muted" style="margin-top:7px">काम देते समय तय rate अपने आप आएगा। जरूरत हो तो आज के काम के लिए rate बदला जा सकता है।</div>
+</div>
+
+<div class="card" style="margin-top:10px">
+  <b>आज के काम का Rate</b>
+  <div class="muted" style="margin:7px 0 10px">उदाहरण: local one-day Hamal के लिए आज rate अलग तय हुआ हो।</div>
+  <div class="row">
+    <span>तय Rate</span><b>₹1.30</b>
+  </div>
+  <button class="primary" style="margin-top:10px" onclick="editRate()">आज का Rate बदलें</button>
+  <div class="muted" style="margin-top:7px">Rate बदलने पर कारण और किसने बदला, रिकॉर्ड में रहेगा।</div>
+</div>
+
+<div class="notice">💡 Hamal का हिसाब उनकी attendance से नहीं, किए गए काम और तय rate से बनेगा।</div>
+</section>
+
+<section id="hisab" class="page"><button class="vk-back" onclick="vkBack()" aria-label="Back">‹ Back</button>
+<h1>हिसाब</h1>
+<div class="muted">आज तक का हिसाब — जब चाहें देखें</div>
+
+<div class="grid" style="margin-top:12px">
+  <button class="action greenbg" onclick="show('weeklysettlement')"><span>📅</span>Weekly हिसाब<br><small>Reja/Coolie + Poha Mistri</small></button>
+  <button class="action" onclick="show('monthlysalary')"><span>🗓️</span>Monthly हिसाब<br><small>Head Mistri</small></button>
+</div>
+
+<div class="card" style="margin-top:12px">
+  <div class="row"><b>Reja / Coolie</b><b class="green">₹42,500</b></div>
+  <div class="muted" style="margin-top:5px">Weekly · हाजिरी से हिसाब</div>
+</div>
+<div class="card" style="margin-top:10px">
+  <div class="row"><b>Poha Mistri</b><b class="green">₹38,000</b></div>
+  <div class="muted" style="margin-top:5px">Weekly · हाजिरी से हिसाब</div>
+</div>
+<div class="card" style="margin-top:10px">
+  <div class="row"><b>Head Mistri</b><b class="green">₹1,20,000</b></div>
+  <div class="muted" style="margin-top:5px">Monthly</div>
+</div>
+<div class="card" style="margin-top:10px">
+  <div class="row"><b>Hamal</b><b class="green">₹26,400</b></div>
+  <div class="muted" style="margin-top:5px">काम + तय Rate</div>
+</div>
+
+<div class="notice">💡 किसी भी worker की Passbook खोलकर आज तक की कमाई, advance, payment और बाकी रकम देख सकते हैं।</div>
+
+<button class="primary" style="margin-top:4px" onclick="alert('Worker चुनें → Advance डालें → Save. हिसाब अपने आप बदलेगा।')">+ Advance डालें</button>
+</section>
+
+<section id="weekly" class="page"><button class="vk-back" onclick="vkBack()" aria-label="Back">‹ Back</button>
+<h1>Weekly हिसाब</h1>
+<div class="muted">Reja / Coolie और Poha Mistri</div>
+
+<div class="card" style="margin-top:12px">
+  <div class="row"><b>Ramesh Kumar</b><b class="green">₹3,500 बाकी</b></div>
+  <div class="muted">5 दिन × ₹1,000 = ₹5,000</div>
+  <div class="muted">Advance ₹1,500</div>
+</div>
+<div class="card" style="margin-top:10px">
+  <div class="row"><b>Mohan Lal</b><b class="green">₹2,800 बाकी</b></div>
+  <div class="muted">4 दिन × ₹800 = ₹3,200</div>
+  <div class="muted">Advance ₹400</div>
+</div>
+<div class="card" style="margin-top:10px">
+  <div class="row"><b>इस हफ्ते</b><b>₹6,300 बाकी</b></div>
+  <div class="muted">हिसाब हर दिन update होता रहेगा। Weekly payment सिर्फ payment cycle है।</div>
+</div>
+</section>
+
+<section id="monthly" class="page"><button class="vk-back" onclick="vkBack()" aria-label="Back">‹ Back</button>
+<h1>Monthly हिसाब</h1>
+<div class="muted">Head Mistri</div>
+
+<div class="card" style="margin-top:12px">
+  <div class="row"><b>Rajesh Kumar</b><b class="green">₹28,000 बाकी</b></div>
+  <div class="muted">Salary ₹30,000 · Advance ₹2,000</div>
+</div>
+<div class="card" style="margin-top:10px">
+  <div class="row"><b>Mahesh</b><b class="green">₹31,000 बाकी</b></div>
+  <div class="muted">Salary ₹35,000 · Advance ₹4,000</div>
+</div>
+</section>
+
+<section id="orders" class="page"><button class="vk-back" onclick="vkBack()" aria-label="Back">‹ Back</button><h1>आदेश</h1><div class="card"><div class="row"><b>500 बोरी पोहा तैयार रखना है</b><span class="pill">चल रहा है</span></div><div class="muted">Manager · आज</div></div><div class="card" style="margin-top:10px"><div class="row"><b>2 बजे गाड़ी के लिए 300 बोरी</b><span class="pill">पूरा</span></div><div class="muted">Manager · आज</div></div><button class="primary" style="margin-top:12px" onclick="alert('नया आदेश form अगले coding step में जोड़ा जाएगा।')">+ नया आदेश</button></section>
+
+
+<section id="dailyreport" class="page"><button class="vk-back" onclick="vkBack()" aria-label="Back">‹ Back</button>
+<h1>📋 आज की मिल रिपोर्ट</h1>
+<div class="muted">29 अगस्त · दिन का पूरा सार</div>
+<div class="card" style="margin-top:12px"><div class="row"><b>👷 लोग</b><b class="green">आज</b></div>
+<div class="list row"><span>कर्मचारी</span><b>32 / 36</b></div>
+<div class="list row"><span>Reja / Coolie</span><b>8 / 10</b></div>
+<div class="list row"><span>Hamal</span><b>10 / 12</b></div></div>
+<div class="card" style="margin-top:10px"><div class="row"><b>👥 Hamal का काम</b><b class="green">₹1,240</b></div>
+<div class="list row"><span>पोहा काटा</span><b>100 बोरी</b></div>
+<div class="list row"><span>Loading</span><b>300 बोरी</b></div>
+<div class="list row"><span>कांटा + Loading</span><b>400 बोरी</b></div></div>
+<div class="card" style="margin-top:10px"><div class="row"><b>💰 आज का हिसाब</b><b>₹____</b></div>
+<div class="list row"><span>आज के Advance</span><b>₹1,500</b></div>
+<div class="list row"><span>आज की Payment</span><b>₹3,500</b></div></div>
+<div class="card" style="margin-top:10px"><div class="row"><b>📢 मालिक के आदेश</b><b class="green">2 पूरे</b></div><div class="muted">कोई जरूरी काम बाकी नहीं</div></div>
+<div class="card" style="margin-top:10px"><div class="row"><b>🚩 जरूरी सूचना</b><b class="green">कोई नहीं</b></div><div class="muted">आज कोई नया Red Flag नहीं</div></div>
+<div class="card" style="margin-top:10px"><div class="row"><b>✏️ बदलाव का रिकॉर्ड</b><b>2</b></div><div class="muted">2 attendance corrections</div></div>
+<div class="notice">🟢 दिन का काम पूरा होने पर Manager “आज का काम पूरा” दबाएगा। इसके बाद यह रिपोर्ट Owner को मिलेगी और सुरक्षित रहेगी।</div>
+<button class="primary" style="width:100%;margin-top:4px" onclick="alert('आज की मिल रिपोर्ट Owner को भेज दी गई।')">📤 Owner को रिपोर्ट भेजें</button>
+</section>
+
+
+<section id="redflags" class="page"><button class="vk-back" onclick="vkBack()" aria-label="Back">‹ Back</button>
+<h1>🚩 Red Flag</h1>
+<div class="muted">सिर्फ Owner / authorized user के लिए</div>
+<div class="card" style="margin-top:12px"><div class="row"><b>नई जरूरी सूचना</b><b class="red">1</b></div><div class="muted" style="margin-top:6px">यहाँ केवल जरूरी और relevant मामले दिखेंगे।</div></div>
+<div class="card" style="margin-top:10px"><div class="row"><b>Ramesh Kumar</b><span class="pill" style="background:#ffe5e8;color:#b52838">जांच में</span></div><div class="muted" style="margin-top:6px">Advance बाकी: ₹80,000</div><div class="muted">दूसरी registered mill में relevant activity मिली</div><button class="primary" style="margin-top:10px" onclick="show('flagdetail')">विवरण देखें</button></div>
+<div class="card" style="margin-top:10px"><b>+ नया Red Flag</b><div class="muted" style="margin:6px 0 10px">किसी worker के बारे में जरूरी concern दर्ज करें।</div><button class="primary" onclick="alert('Worker चुनें → कारण चुनें → छोटा विवरण → Save')">बनाएँ</button></div>
+<div class="notice">⚠️ Red Flag कोई public blacklist नहीं है। Complaint को अपने आप सच या अपराध नहीं माना जाएगा।</div>
+</section>
+
+<section id="flagdetail" class="page"><button class="vk-back" onclick="vkBack()" aria-label="Back">‹ Back</button>
+<h1>🚩 Red Flag विवरण</h1>
+<div class="card" style="margin-top:12px"><div class="row"><div><div class="big">Ramesh Kumar</div><div class="muted">VK-10452 · Poha Mistri</div></div><div class="avatar">RK</div></div></div>
+<div class="card" style="margin-top:10px"><div class="row"><b>स्थिति</b><span class="pill" style="background:#fff5e3;color:#b86b00">जांच में</span></div>
+<div class="list row"><span>Advance बाकी</span><b class="red">₹80,000</b></div><div class="list row"><span>कारण</span><b>काम पर नहीं आया</b></div><div class="list row"><span>System सूचना</span><b>Relevant activity</b></div></div>
+<div class="card" style="margin-top:10px"><h3 style="margin:0 0 8px">क्या करें?</h3><button class="primary" style="width:100%" onclick="alert('स्थिति: जांच में → सुलझा')">🟢 सुलझा हुआ करें</button><button class="primary" style="width:100%;margin-top:8px" onclick="alert('स्थिति: बंद')">⚪ बंद करें</button></div>
+<div class="notice">🔐 यह जानकारी confidential है। हर बदलाव का record रहेगा।</div>
+</section>
+
+
+<section id="millprofile" class="page"><button class="vk-back" onclick="vkBack()" aria-label="Back">‹ Back</button>
+<h1>🏭 Mill Profile</h1><div class="muted">एक Mill · Owner · Manager · Staff</div>
+<div class="card" style="margin-top:12px"><div class="row"><div><div class="big" id="millNameView">Vishwakarmaa Pilot Mill</div><div class="muted" id="millLocationView">Bhatapara · Chhattisgarh</div></div><span class="pill">Active</span></div><div class="list row"><span>Mill ID</span><b id="millIdView">MILL-VK-001</b></div><div class="list row"><span>Current user</span><b id="currentRoleView">Owner</b></div></div>
+<div class="card" style="margin-top:10px"><div class="row"><b>👑 Owner</b><span class="pill">Primary</span></div><div style="margin-top:8px"><b id="ownerNameView">Mill Owner</b><div class="muted">Owner · Full access</div></div></div>
+<div class="card" style="margin-top:10px"><div class="row"><b>👨‍💼 Manager</b><span class="pill">Linked</span></div><div style="margin-top:8px"><b id="managerNameView">Rajesh Manager</b><div class="muted">Manager · Attendance · People · Hamal · Orders · Reports</div></div><button class="primary" style="width:100%;margin-top:10px" onclick="switchRole('Manager')">Manager View में जाएँ</button></div>
+<div class="notice">🔗 <b>Link समझें:</b> Manager अलग व्यक्ति/profile है, लेकिन उसी Mill ID <b id="millIdView2">MILL-VK-001</b> से जुड़ा है। इसलिए Manager जो attendance/worker entry करेगा, वह इसी Mill के data में दिखाई देगी.</div>
+<button class="primary" style="width:100%;margin-top:8px" onclick="openMillEdit()">✏️ Mill / Profile Edit</button></section>
+
+<section id="manager" class="page"><button class="vk-back" onclick="vkBack()" aria-label="Back">‹ Back</button>
+<h1>Manager का काम</h1>
+<div class="muted">आज · 29 अगस्त</div>
+
+<div class="grid" style="margin-top:12px">
+<button class="action" onclick="show('attendance')"><span>📅</span>हाजिरी<br><small>32 / 36</small></button>
+<button class="action" onclick="show('reja')"><span>👷</span>Reja / Coolie<br><small>8 / 10</small></button>
+<button class="action orangebg" onclick="show('hamal')"><span>👥</span>Hamal काम<br><small>आज का काम</small></button>
+<button class="action" onclick="show('orders')"><span>📢</span>मालिक के आदेश<br><small>1 काम बाकी</small></button>
+</div>
+
+<div class="card" style="margin-top:12px">
+<div class="row"><b>📢 आज का जरूरी आदेश</b><span class="pill">चल रहा है</span></div>
+<div style="margin-top:7px">500 बोरी पोहा तैयार रखना है।</div>
+<div class="muted" style="margin-top:5px">पूरा: 350 / 500 बोरी</div>
+</div>
+
+<div class="card" style="margin-top:10px">
+<div class="row"><b>🏁 दिन का काम</b><span class="muted">शाम</span></div>
+<div class="muted" style="margin:7px 0">हाजिरी और आज का काम पूरा होने के बाद दिन बंद करें।</div>
+<button class="primary" style="width:100%" onclick="show('dailyreport')">🟢 आज का काम पूरा</button>
+</div>
+
+<div class="notice">💡 Manager को वही काम दिखेगा जिसकी permission Owner ने दी है। Private हिसाब और confidential Red Flag details नहीं दिखेंगी।</div>
+</section>
+
+
+<section id="gate" class="page"><button class="vk-back" onclick="vkBack()" aria-label="Back">‹ Back</button>
+<h1>🚪 Gate / Chowkidar</h1>
+<div class="muted">सबसे आसान हाजिरी</div>
+
+<div class="card" style="margin-top:12px">
+  <div class="row"><b>आज</b><b class="green">8 / 10 Reja / Coolie</b></div>
+  <div class="muted" style="margin-top:5px">Worker आए तो सिर्फ उसकी पहचान करके “आया” दबाएँ।</div>
+</div>
+
+<h3 style="margin-top:18px">आज आने वाले</h3>
+
+<div class="worker">
+  <div class="avatar">RK</div>
+  <div class="info"><b>Ramesh Kumar</b><div class="muted">VK-10452 · Reja / Coolie</div></div>
+  <button class="att p" onclick="this.innerText='✓ आया';this.disabled=true">आया</button>
+</div>
+
+<div class="worker">
+  <div class="avatar">ML</div>
+  <div class="info"><b>Mohan Lal</b><div class="muted">VK-10831 · Reja / Coolie</div></div>
+  <button class="att p" onclick="this.innerText='✓ आया';this.disabled=true">आया</button>
+</div>
+
+<div class="card" style="margin-top:12px">
+  <b>🔍 नया Worker / पहचान</b>
+  <div class="muted" style="margin:7px 0 10px">QR, फोटो/Face या उपलब्ध पहचान से Worker खोजें।</div>
+  <button class="primary" onclick="alert('QR / Face / Worker ID से पहचान check होगी। फिर system NOC और जरूरी status check करेगा।')">पहचान करें</button>
+</div>
+
+<div class="notice">
+🟢 Clear → आने दें<br>
+🟡 NOC चाहिए → Owner/Manager को भेजें<br>
+🔴 रोकें → बिना जरूरी अनुमति entry न दें
+</div>
+
+<div class="card" style="margin-top:10px">
+  <b>आज की Gate Activity</b>
+  <div class="list row"><span>पहचान check</span><b>12</b></div>
+  <div class="list row"><span>आए</span><b class="green">8</b></div>
+  <div class="list row"><span>रुके / Review</span><b class="orange">1</b></div>
+</div>
+</section>
+
+
+<section id="accounts" class="page"><button class="vk-back" onclick="vkBack()" aria-label="Back">‹ Back</button>
+<h1>💰 Accounts</h1>
+<div class="muted">सिर्फ हिसाब का काम</div>
+
+<div class="grid" style="margin-top:12px">
+  <button class="action greenbg" onclick="show('weeklysettlement')"><span>📅</span>Weekly हिसाब<br><small>Reja / Coolie + Poha Mistri</small></button>
+  <button class="action" onclick="show('monthlysalary')"><span>🗓️</span>Monthly हिसाब<br><small>Head Mistri</small></button>
+</div>
+
+<div class="card" style="margin-top:12px">
+  <div class="row"><b>आज के Advance</b><b class="red">₹4,500</b></div>
+  <div class="muted" style="margin-top:5px">3 workers को</div>
+  <button class="primary" style="margin-top:10px" onclick="alert('Worker चुनें → Amount → Reason → Save. बदलाव का record अपने आप बनेगा।')">+ Advance डालें</button>
+</div>
+
+<div class="card" style="margin-top:10px">
+  <div class="row"><b>आज की Payment</b><b class="green">₹12,000</b></div>
+  <div class="muted" style="margin-top:5px">5 workers को</div>
+  <button class="primary" style="margin-top:10px" onclick="alert('Worker चुनें → Payment amount → Confirm. Passbook और balance अपने आप update होगा।')">+ Payment डालें</button>
+</div>
+
+<h3 style="margin-top:18px">Worker का हिसाब</h3>
+<div class="worker" onclick="show('profile')">
+  <div class="avatar">RK</div>
+  <div class="info"><b>Ramesh Kumar</b><div class="muted">Poha Mistri · Weekly</div></div>
+  <div><b class="green">₹3,000</b><div class="muted">बाकी</div></div>
+</div>
+<div class="worker" onclick="show('profile')">
+  <div class="avatar">ML</div>
+  <div class="info"><b>Mohan Lal</b><div class="muted">Reja / Coolie · Weekly</div></div>
+  <div><b class="green">₹2,800</b><div class="muted">बाकी</div></div>
+</div>
+
+<div class="notice">🔐 Accounts को केवल जरूरी financial information दिखेगी। Worker की confidential identity/Red Flag information permission के बिना नहीं दिखेगी।</div>
+</section>
+
+
+<section id="backup" class="page"><button class="vk-back" onclick="vkBack()" aria-label="Back">‹ Back</button>
+<h1>☁️ Backup & Sync</h1>
+<div class="muted">Data सुरक्षित रहे, internet हो या न हो</div>
+
+<div class="card" style="margin-top:12px">
+  <div class="row"><b>☁️ Cloud Backup</b><span class="pill">सुरक्षित</span></div>
+  <div class="muted" style="margin-top:7px">Last backup: आज 6:42 PM</div>
+  <div class="muted">अगला backup: automatic</div>
+</div>
+
+<div class="card" style="margin-top:10px">
+  <div class="row"><b>📱 इस फोन का Data</b><span class="pill">Saved</span></div>
+  <div class="muted" style="margin-top:7px">आज के attendance, काम और हिसाब की entries सुरक्षित हैं।</div>
+</div>
+
+<div class="card" style="margin-top:10px">
+  <div class="row"><b>📶 Internet</b><b class="green">Online</b></div>
+  <div class="muted" style="margin-top:6px">Internet बंद होने पर भी basic entry चलती रहेगी।</div>
+</div>
+
+<div class="card" style="margin-top:10px">
+  <div class="row"><b>🔄 Sync</b><b>0 बाकी</b></div>
+  <div class="muted" style="margin-top:6px">Offline में की गई entries internet आते ही server से sync होंगी।</div>
+  <button class="primary" style="margin-top:10px" onclick="alert('Sync शुरू हुआ। सभी pending entries सुरक्षित तरीके से upload होंगी।')">अभी Sync करें</button>
+</div>
+
+<div class="card" style="margin-top:10px">
+  <b>🛡️ Recovery</b>
+  <div class="muted" style="margin-top:7px">Phone खराब/गुम होने पर Owner नए device पर verified login करके data restore कर सकता है।</div>
+</div>
+
+<div class="notice">🔐 Important records जैसे attendance correction, payment, rate change और Red Flag history का audit record अलग से सुरक्षित रहेगा।</div>
+</section>
+
+
+<section id="shift" class="page"><button class="vk-back" onclick="vkBack()" aria-label="Back">‹ Back</button>
+<h1>📅 आज की हाजिरी</h1>
+<div class="muted">Simple attendance — जरूरत के हिसाब से extra details</div>
+
+<div class="card" style="margin-top:12px">
+  <div class="row"><b>Ramesh Kumar</b><span class="pill">Present</span></div>
+  <div class="muted" style="margin-top:6px">Poha Mistri · ₹1,000/day</div>
+  <div class="grid" style="margin-top:10px">
+    <button class="action greenbg" onclick="alert('Full Day Present दर्ज हुआ')"><span>✓</span>Full Day</button>
+    <button class="action" onclick="alert('Half Day चुना गया')"><span>½</span>Half Day</button>
+  </div>
+  <div class="row" style="margin-top:10px">
+    <button class="att p" onclick="alert('Late arrival: 9:05 AM')">⏰ Late</button>
+    <button class="att p" onclick="alert('Overtime दर्ज: 2 घंटे')">＋ Overtime</button>
+    <button class="att a" onclick="alert('Leave दर्ज हुआ')">Leave</button>
+  </div>
+</div>
+
+<div class="card" style="margin-top:10px">
+  <b>📝 Leave</b>
+  <div class="muted" style="margin:7px 0">पहले से approved छुट्टी हो तो attendance में सीधे Leave दिखेगा।</div>
+  <button class="primary" onclick="alert('Worker चुनें → तारीख → Leave → Save')">+ Leave दर्ज करें</button>
+</div>
+
+<div class="card" style="margin-top:10px">
+  <b>⏱️ Overtime</b>
+  <div class="muted" style="margin:7px 0">Overtime तभी हिसाब में जुड़ेगा जब उस worker category के लिए OT rule/rate set हो।</div>
+  <button class="primary" onclick="alert('OT hours डालें → applicable rate → calculation automatic')">+ OT दर्ज करें</button>
+</div>
+
+<div class="notice">💡 Basic attendance हमेशा 1-tap रहेगी। Half Day, Late, Leave और Overtime सिर्फ जरूरत होने पर खोलें।</div>
+</section>
+
+
+<section id="vkcard" class="page"><button class="vk-back" onclick="vkBack()" aria-label="Back">‹ Back</button>
+<h1>🪪 Vishwakarmaa Worker ID</h1>
+<div class="muted">एक Worker · एक VKID</div>
+
+<div class="card" style="margin-top:14px;padding:20px">
+  <div class="row">
+    <div>
+      <div class="muted">Vishwakarmaa ID</div>
+      <div class="big blue">VSK-1045288</div>
+    </div>
+    <div class="avatar">RK</div>
+  </div>
+  <div style="margin-top:16px"><b>Ramesh Kumar</b></div>
+  <div class="muted">Poha Mistri · Verified Worker</div>
+  <div class="row" style="margin-top:14px">
+    <span class="pill">🟢 Identity Verified</span>
+    <span class="pill">Active</span>
+  </div>
+  <div style="margin:18px auto 8px;width:130px;height:130px;border:8px solid #182235;border-radius:12px;display:grid;place-items:center;font-size:58px">▦</div>
+  <div class="muted" style="text-align:center">QR को सिर्फ verified Vishwakarmaa app से scan करें</div>
+</div>
+
+<div class="card" style="margin-top:10px">
+  <b>🔐 Secure Verification</b>
+  <div class="list row"><span>VKID</span><b>VSK-1045288</b></div>
+  <div class="list row"><span>Identity</span><b class="green">Verified</b></div>
+  <div class="list row"><span>Face/Biometric</span><b>Available / Linked</b></div>
+  <div class="list row"><span>QR Status</span><b class="green">Valid</b></div>
+</div>
+
+<div class="notice">⚠️ QR का screenshot या photo अकेले पर्याप्त नहीं होगा। जहाँ required हो, live identity check / Face / Biometric से verification किया जाएगा।</div>
+
+<button class="primary" style="width:100%;margin-top:4px" onclick="alert('Secure verification शुरू: VKID + QR + उपलब्ध identity checks')">🔍 Verify Worker</button>
+</section>
+
+
+<section id="v1map" class="page"><button class="vk-back" onclick="vkBack()" aria-label="Back">‹ Back</button>
+<h1>🧭 Vishwakarmaa V1</h1>
+<div class="muted">पूरा सिस्टम — एक simple flow में</div>
+
+<div class="card" style="margin-top:12px">
+  <div class="row"><b>🪪 Worker Identity</b><span class="pill">CORE</span></div>
+  <div class="list row"><span>One Worker → One VKID</span><b>✓</b></div>
+  <div class="list row"><span>Photo / Face / Biometric</span><b>✓</b></div>
+  <div class="list row"><span>Duplicate protection</span><b>✓</b></div>
+</div>
+
+<div class="card" style="margin-top:10px">
+  <div class="row"><b>👥 Workforce</b><span class="pill">CORE</span></div>
+  <div class="list row"><span>Head Mistri</span><b>Monthly</b></div>
+  <div class="list row"><span>Poha Mistri</span><b>Weekly</b></div>
+  <div class="list row"><span>Reja / Coolie</span><b>Weekly</b></div>
+  <div class="list row"><span>Hamal</span><b>Work Based</b></div>
+</div>
+
+<div class="card" style="margin-top:10px">
+  <div class="row"><b>📅 Attendance</b><span class="pill">CORE</span></div>
+  <div class="muted">Biometric/Face हो तो automatic; नहीं तो mobile पर 1-tap Present / Absent.</div>
+</div>
+
+<div class="card" style="margin-top:10px">
+  <div class="row"><b>💰 Hisaab + Passbook</b><span class="pill">CORE</span></div>
+  <div class="muted">Attendance/Rate → Earnings → Advance → Payment → Balance. हर worker की अपनी digital diary.</div>
+</div>
+
+<div class="card" style="margin-top:10px">
+  <div class="row"><b>👥 Hamal Engine</b><span class="pill">CORE</span></div>
+  <div class="muted">काम × fixed rate. काम देते समय जरूरत हो तो आज का special rate, कारण सहित. Permanent rate list सुरक्षित रहेगी.</div>
+</div>
+
+<div class="card" style="margin-top:10px">
+  <div class="row"><b>📢 Owner → Manager</b><span class="pill">OPS</span></div>
+  <div class="muted">आदेश → progress → complete → daily report. Manager को सिर्फ assigned काम.</div>
+</div>
+
+<div class="card" style="margin-top:10px">
+  <div class="row"><b>📋 Daily Mill Report</b><span class="pill">OPS</span></div>
+  <div class="muted">दिन के attendance, work, advance, payment, orders और corrections से automatic summary.</div>
+</div>
+
+<div class="card" style="margin-top:10px">
+  <div class="row"><b>🚩 Red Flag + Recovery</b><span class="pill">NETWORK</span></div>
+  <div class="muted">Advance/complaint → relevant verified activity → owner review. कोई public blacklist नहीं.</div>
+</div>
+
+<div class="card" style="margin-top:10px">
+  <div class="row"><b>📄 NOC + Employment</b><span class="pill">NETWORK</span></div>
+  <div class="muted">Permanent employment → temporary work के लिए applicable NOC → expiry/cancel + audit.</div>
+</div>
+
+<div class="card" style="margin-top:10px">
+  <div class="row"><b>🏢 Association</b><span class="pill">GOVERNANCE</span></div>
+  <div class="muted">Rules → Review Committee → decision. System evidence/record रखेगा; automatic punishment नहीं.</div>
+</div>
+
+<div class="card" style="margin-top:10px">
+  <div class="row"><b>🔐 Security</b><span class="pill">ALWAYS ON</span></div>
+  <div class="muted">Role permissions, audit log, device revoke, sensitive-action approval, secure backup.</div>
+</div>
+
+<div class="card" style="margin-top:10px">
+  <div class="row"><b>☁️ Offline + Sync</b><span class="pill">ALWAYS ON</span></div>
+  <div class="muted">Internet न हो तो basic work चलता रहे; connection आते ही sync.</div>
+</div>
+
+<div class="notice"><b>Golden Architecture Rule</b><br>
+Simple screen बाहर · powerful automation अंदर · private data permission के बिना नहीं · कोई important record silently delete नहीं होगा.</div>
+
+<div class="card" style="margin-top:10px">
+  <b>🔗 Core Data Chain</b>
+  <div style="margin-top:10px;line-height:2;font-weight:700">
+  Worker → VKID → Employment → Attendance → Work → Passbook → Advance/Payment → NOC/Red Flag → Association Review → Audit
+  </div>
+</div>
+
+<button class="primary" style="width:100%;margin-top:12px" onclick="alert('V1 architecture checkpoint complete. अब implementation phase में modules को real database, authentication और APIs से जोड़ना है।')">✓ V1 Architecture Lock</button>
+</section>
+
+
+<section id="calculations" class="page"><button class="vk-back" onclick="vkBack()" aria-label="Back">‹ Back</button>
+<h1>🧮 हिसाब Calculation Engine</h1>
+<div class="muted">System खुद calculation करेगा</div>
+
+<div class="card" style="margin-top:12px">
+  <div class="row"><b>Reja / Coolie</b><span class="pill">Weekly</span></div>
+  <div class="list row"><span>Present</span><b>₹800 / दिन</b></div>
+  <div class="list row"><span>Half Day</span><b>₹400</b></div>
+  <div class="list row"><span>5 Present</span><b>₹4,000</b></div>
+  <div class="list row"><span>Advance</span><b class="red">−₹1,000</b></div>
+  <div class="list row"><span>बाकी</span><b class="green">₹3,000</b></div>
+</div>
+
+<div class="card" style="margin-top:10px">
+  <div class="row"><b>Poha Mistri</b><span class="pill">Weekly</span></div>
+  <div class="muted" style="margin-top:6px">Present / Half Day / approved OT के configured rules के अनुसार automatic calculation.</div>
+</div>
+
+<div class="card" style="margin-top:10px">
+  <div class="row"><b>Head Mistri</b><span class="pill">Monthly</span></div>
+  <div class="muted" style="margin-top:6px">Monthly salary + approved adjustments − advances/payments = current balance.</div>
+</div>
+
+<div class="card" style="margin-top:10px">
+  <div class="row"><b>Hamal</b><span class="pill">Work Based</span></div>
+  <div class="list row"><span>पोहा काटा</span><b>100 × ₹1.30 = ₹130</b></div>
+  <div class="list row"><span>Loading</span><b>300 × ₹0.90 = ₹270</b></div>
+  <div class="list row"><span>Special Rate</span><b>आज का rate only</b></div>
+  <div class="list row"><span>आज का total</span><b class="green">₹400</b></div>
+</div>
+
+<div class="card" style="margin-top:10px">
+  <b>🧾 Calculation Rules</b>
+  <div class="muted" style="margin-top:7px">हर calculation के साथ source attendance/work entry, rate version और adjustment record जुड़ा रहेगा।</div>
+</div>
+
+<div class="notice">🔐 कोई calculation manually overwrite नहीं होगी। Correction करने पर नया adjustment record बनेगा और पुरानी calculation history सुरक्षित रहेगी।</div>
+</section>
+
+
+<section id="payment" class="page"><button class="vk-back" onclick="vkBack()" aria-label="Back">‹ Back</button>
+<h1>💳 Payment & Settlement</h1>
+<div class="muted">Worker का हिसाब साफ तरीके से बंद करें</div>
+
+<div class="card" style="margin-top:12px">
+  <div class="row"><b>Ramesh Kumar</b><span class="pill">Weekly</span></div>
+  <div class="muted" style="margin-top:5px">Poha Mistri · VK-10452</div>
+  <div class="list row"><span>कुल कमाई</span><b>₹5,000</b></div>
+  <div class="list row"><span>Advance</span><b class="red">−₹1,500</b></div>
+  <div class="list row"><span>पहले की Payment</span><b>₹0</b></div>
+  <div class="list row"><span>देना बाकी</span><b class="green">₹3,500</b></div>
+</div>
+
+<div class="card" style="margin-top:10px">
+  <b>💰 Payment करें</b>
+  <div class="muted" style="margin:7px 0 10px">System suggested amount: <b>₹3,500</b></div>
+  <button class="primary" style="width:100%" onclick="makePayment()">₹3,500 Payment दर्ज करें</button>
+  <button class="action" style="width:100%;margin-top:8px" onclick="alert('Partial payment: जितना दिया है उतना डालें; बाकी balance बना रहेगा।')"><span>➗</span>Partial Payment</button>
+</div>
+
+<div class="card" style="margin-top:10px">
+  <b>🧾 Payment Proof</b>
+  <div class="muted" style="margin:7px 0">Cash / Bank / UPI में से तरीका चुनें और जरूरत हो तो receipt/photo attach करें।</div>
+  <div class="row">
+    <button class="att p" onclick="alert('Cash selected')">Cash</button>
+    <button class="att p" onclick="alert('Bank selected')">Bank</button>
+    <button class="att p" onclick="alert('UPI selected')">UPI</button>
+  </div>
+</div>
+
+<div class="card" style="margin-top:10px">
+  <b>🔐 Settlement Lock</b>
+  <div class="muted" style="margin:7px 0">Payment save होने पर Passbook और balance update होगा। बाद में correction करने पर नया adjustment बनेगा; पुरानी payment मिटेगी नहीं।</div>
+</div>
+
+<div class="notice">✓ Settlement के बाद भी worker की पुरानी attendance, advance और payment history सुरक्षित रहेगी।</div>
+</section>
+
+
+<section id="v1final" class="page"><button class="vk-back" onclick="vkBack()" aria-label="Back">‹ Back</button>
+<h1>🛡️ Vishwakarmaa V1 Final</h1>
+<div class="muted">Missing gaps solved — implementation-ready blueprint</div>
+
+<div class="card" style="margin-top:12px">
+  <div class="row"><b>🪪 Identity & Consent</b><span class="pill">LOCKED</span></div>
+  <div class="muted" style="margin-top:7px">VKID unique रहेगा। Identity verification level, consent, verification date और permitted data-sharing scope record होंगे। Government ID का raw number unnecessary screens पर नहीं दिखेगा।</div>
+</div>
+
+<div class="card" style="margin-top:10px">
+  <div class="row"><b>🚩 Red Flag + Recovery</b><span class="pill">LOCKED</span></div>
+  <div class="muted" style="margin-top:7px">Advance recovery, unauthorized work, attendance/financial dispute और other concerns अलग case types होंगे। Evidence → review → decision → recovery/closure पूरा lifecycle रहेगा। Public blacklist नहीं।</div>
+</div>
+
+<div class="card" style="margin-top:10px">
+  <div class="row"><b>🌐 Network Activity</b><span class="pill">LOCKED</span></div>
+  <div class="muted" style="margin-top:7px">Relevant events: registration, verified gate entry, attendance, employment link और NOC events। दूसरे mill का private ledger नहीं। Visibility role + Association rules से तय होगी।</div>
+</div>
+
+<div class="card" style="margin-top:10px">
+  <div class="row"><b>📴 Offline + Sync</b><span class="pill">LOCKED</span></div>
+  <div class="muted" style="margin-top:7px">Offline entries encrypted local queue में जाएँगी। Online होने पर server validation + sync होगा। Conflict होने पर silent overwrite नहीं; audit + authorized resolution.</div>
+</div>
+
+<div class="card" style="margin-top:10px">
+  <div class="row"><b>✏️ Correction Rules</b><span class="pill">LOCKED</span></div>
+  <div class="muted" style="margin-top:7px">Same-day operational correction limited role को। पुराने records के लिए Owner approval. हर change में before/after, user, time और reason.</div>
+</div>
+
+<div class="card" style="margin-top:10px">
+  <div class="row"><b>👥 Permission Matrix</b><span class="pill">LOCKED</span></div>
+  <div class="muted" style="margin-top:7px">Owner, Partner, Manager, Supervisor, Gate, Accounts और custom roles. UI permission के साथ server-side authorization भी mandatory.</div>
+</div>
+
+<div class="card" style="margin-top:10px">
+  <div class="row"><b>🏭 Multiple Mills</b><span class="pill">READY</span></div>
+  <div class="muted" style="margin-top:7px">एक Owner के My Mills में कई mills. हर mill का attendance, ledger, staff और private business data अलग scope में रहेगा.</div>
+</div>
+
+<div class="card" style="margin-top:10px">
+  <div class="row"><b>👥 Hamal Teams</b><span class="pill">READY</span></div>
+  <div class="muted" style="margin-top:7px">6–15 member team, leader, team attendance, work quantity, rate और settlement. Individual members की history भी बनी रहेगी.</div>
+</div>
+
+<div class="card" style="margin-top:10px">
+  <div class="row"><b>🔔 Smart Alerts</b><span class="pill">READY</span></div>
+  <div class="muted" style="margin-top:7px">Immediate: Red Flag / Owner order. Scheduled: Daily Report / NOC expiry. Routine attendance notifications नहीं.</div>
+</div>
+
+<div class="card" style="margin-top:10px">
+  <div class="row"><b>📊 Reports</b><span class="pill">READY</span></div>
+  <div class="muted" style="margin-top:7px">Daily, weekly, monthly, worker-wise, labour-cost, Hamal-cost, attendance और outstanding-advance reports.</div>
+</div>
+
+<div class="card" style="margin-top:10px">
+  <div class="row"><b>🧾 Payment Proof</b><span class="pill">READY</span></div>
+  <div class="muted" style="margin-top:7px">Cash/Bank/UPI, reference number, optional proof, duplicate-reference validation और immutable payment history.</div>
+</div>
+
+<div class="card" style="margin-top:10px">
+  <div class="row"><b>🚨 Incident Module</b><span class="pill">READY</span></div>
+  <div class="muted" style="margin-top:7px">Accident, fight, damage, theft या other incident अलग confidential case में record होगा; Red Flag से automatically mix नहीं होगा.</div>
+</div>
+
+<div class="card" style="margin-top:10px">
+  <div class="row"><b>🧑‍🔧 Worker Access</b><span class="pill">V1 OPTIONAL</span></div>
+  <div class="muted" style="margin-top:7px">V1 में Worker Card + QR पर्याप्त. Full worker app बाद में, जहाँ worker अपनी attendance और settlement देख सके.</div>
+</div>
+
+<div class="notice"><b>Final rule:</b> Privacy by default · minimum necessary data · explicit permissions · server-side authorization · audit trail · no silent deletion · no automatic guilt/blacklisting.</div>
+
+<button class="primary" style="width:100%;margin-top:10px" onclick="alert('V1 Gap Audit complete. Product blueprint is ready for implementation planning.')">✓ V1 Gap Audit Complete</button>
+</section>
+
+
+<section id="dailyreportfinal" class="page"><button class="vk-back" onclick="vkBack()" aria-label="Back">‹ Back</button>
+<h1>📋 आज की Mill Report</h1>
+<div class="muted">29 अगस्त · Day Closed · Owner Summary</div>
+
+<div class="grid" style="margin-top:12px">
+  <div class="stat"><b>👷 2</b><span>Full Day</span></div>
+  <div class="stat"><b>½ 1</b><span>Half Day</span></div>
+  <div class="stat"><b>🏖️ 1</b><span>Leave</span></div>
+  <div class="stat"><b>👥 7</b><span>Hamal Members</span></div>
+</div>
+
+<div class="card" style="margin-top:12px">
+  <div class="row"><b>💰 Reja / Coolie Cost</b><b>₹1,800</b></div>
+  <div class="list row"><span>Attendance-based</span><b>₹1,800</b></div>
+  <div class="list row"><span>Hamal work</span><b>₹695</b></div>
+  <div class="list row"><span>आज का total labour value</span><b class="green">₹2,495</b></div>
+</div>
+
+<div class="card" style="margin-top:10px">
+  <div class="row"><b>💳 आज का पैसा</b><span class="pill">3 Entries</span></div>
+  <div class="list row"><span>Advance</span><b class="red">₹2,000</b></div>
+  <div class="list row"><span>Payment</span><b class="green">₹4,500</b></div>
+  <div class="list row"><span>Net cash movement</span><b>₹6,500</b></div>
+</div>
+
+<div class="card" style="margin-top:10px">
+  <div class="row"><b>👥 Hamal Work</b><span class="pill">Complete</span></div>
+  <div class="list row"><span>Loading</span><b>400 units</b></div>
+  <div class="list row"><span>पोहा काटा</span><b>500 units</b></div>
+  <div class="list row"><span>Special-rate jobs</span><b>1</b></div>
+</div>
+
+<div class="card" style="margin-top:10px">
+  <div class="row"><b>📢 Orders</b><span class="pill">1 Pending</span></div>
+  <div class="list row"><span>500 बोरी पोहा तैयार</span><b>350 / 500</b></div>
+  <div class="muted" style="margin-top:6px">Owner action: Manager से remaining work confirm करें.</div>
+</div>
+
+<div class="card" style="margin-top:10px">
+  <div class="row"><b>🚩 Attention Required</b><span class="pill">2</span></div>
+  <div class="list row"><span>1 special Hamal rate</span><b>Reason recorded</b></div>
+  <div class="list row"><span>1 pending order</span><b>Review</b></div>
+</div>
+
+<div class="card" style="margin-top:10px">
+  <b>🔐 Report Integrity</b>
+  <div class="muted" style="margin-top:7px">Report attendance, work, advance, payment और audit records से बनी है। बाद में correction होने पर report version history में नया revision बनेगा.</div>
+</div>
+
+<div class="notice"><b>Owner takeaway:</b> आज कितने लोग आए, कितना labour work हुआ, कितना पैसा गया, क्या pending है और किस चीज पर ध्यान देना है — सब एक page पर.</div>
+
+<button class="primary" style="width:100%;margin-top:10px" onclick="alert('Report share/export feature production में secure PDF/WhatsApp share permissions के साथ जोड़ा जाएगा।')">📤 Report Share / Export</button>
+</section>
+
+<section id="weeklysettlement" class="page"><button class="vk-back" onclick="vkBack()" aria-label="Back">‹ Back</button>
+<h1>📅 Weekly Settlement</h1>
+<div class="muted">इस सप्ताह का पूरा हिसाब · Ready to Pay</div>
+
+<div class="card" style="margin-top:12px">
+  <div class="row"><b>Week</b><span class="pill">25–29 Aug</span></div>
+  <div class="list row"><span>Workers</span><b>18</b></div>
+  <div class="list row"><span>Total Earnings</span><b>₹86,400</b></div>
+  <div class="list row"><span>Total Advance</span><b class="red">−₹12,500</b></div>
+  <div class="list row"><span>Already Paid</span><b>−₹20,000</b></div>
+  <div class="list row"><span>Net Payable</span><b class="green">₹53,900</b></div>
+</div>
+
+<div class="card" style="margin-top:10px">
+  <div class="row"><b>👷 Reja / Coolie</b><span class="pill">12 Workers</span></div>
+  <div class="list row"><span>Mohan Lal</span><b>₹2,300</b></div>
+  <div class="list row"><span>Suresh Yadav</span><b>₹1,900</b></div>
+  <div class="list row"><span>10 others</span><b>₹31,700</b></div>
+</div>
+
+<div class="card" style="margin-top:10px">
+  <div class="row"><b>👨‍🔧 Poha Mistri</b><span class="pill">6 Workers</span></div>
+  <div class="list row"><span>Ramesh Kumar</span><b>₹3,500</b></div>
+  <div class="list row"><span>5 others</span><b>₹14,500</b></div>
+</div>
+
+<div class="card" style="margin-top:10px">
+  <b>⚠️ Before Closing</b>
+  <div class="muted" style="margin-top:7px">2 attendance corrections और 1 payment reference review pending हैं।</div>
+  <button class="action" style="width:100%;margin-top:10px" onclick="alert('Pending items खोलें → correction/payment reference verify करें → Owner approval के बाद close करें.')"><span>🔎</span>Review Pending Items</button>
+</div>
+
+<div class="notice">🔐 Closing के बाद week lock होगा। Locked week में Manager direct edit नहीं कर पाएगा। Genuine correction केवल authorized approval + adjustment + audit से होगी।</div>
+
+<button class="primary" style="width:100%;margin-top:10px" onclick="if(confirm('Week 25–29 Aug को lock करके settlement list final करें?')) alert('Week Locked ✓\\nNet Payable: ₹53,900\\nअब payment entries settlement के against record होंगी।')">🔒 Lock Week & Finalize</button>
+</section>
+
+<section id="monthlysalary" class="page"><button class="vk-back" onclick="vkBack()" aria-label="Back">‹ Back</button>
+<h1>🗓️ Monthly Salary</h1>
+<div class="muted">Head Mistri / Monthly staff · Salary Closing</div>
+
+<div class="card" style="margin-top:12px">
+  <div class="row"><b>August 2026</b><span class="pill">Ready for Review</span></div>
+  <div class="list row"><span>Head Mistri</span><b>1</b></div>
+  <div class="list row"><span>Gross Salary</span><b>₹30,000</b></div>
+  <div class="list row"><span>Approved adjustments</span><b>+₹1,000</b></div>
+  <div class="list row"><span>Advance</span><b class="red">−₹5,000</b></div>
+  <div class="list row"><span>Previous payments</span><b>−₹10,000</b></div>
+  <div class="list row"><span>Net Payable</span><b class="green">₹16,000</b></div>
+</div>
+
+<div class="card" style="margin-top:10px">
+  <b>👨‍🔧 Ramesh Kumar · Head Mistri</b>
+  <div class="muted" style="margin-top:6px">Monthly salary ₹30,000</div>
+  <div class="list row"><span>Attendance</span><b>28 / 28 working days</b></div>
+  <div class="list row"><span>Approved OT / adjustment</span><b>₹1,000</b></div>
+  <div class="list row"><span>Advance</span><b>₹5,000</b></div>
+  <div class="list row"><span>Paid earlier</span><b>₹10,000</b></div>
+</div>
+
+<div class="card" style="margin-top:10px">
+  <b>⚙️ Salary Rule</b>
+  <div class="muted" style="margin-top:7px">Monthly staff की salary configured monthly rule से बनेगी। Attendance सिर्फ policy के अनुसार adjustment/absence calculation में इस्तेमाल होगी; बिना configured rule के salary automatically कम नहीं होगी.</div>
+</div>
+
+<div class="card" style="margin-top:10px">
+  <b>🔎 Final Review</b>
+  <div class="muted" style="margin:7px 0">Payment से पहले advance, previous payments और approved adjustments verify करें.</div>
+  <button class="action" style="width:100%" onclick="alert('Salary review complete: ₹16,000 payable.')"><span>✓</span>Mark Reviewed</button>
+</div>
+
+<div class="notice">🔒 Monthly closing के बाद salary calculation lock होगी। Correction केवल authorized adjustment + audit से होगी.</div>
+<button class="primary" style="width:100%;margin-top:10px" onclick="if(confirm('August salary ₹16,000 finalize करें?')) alert('August Salary Finalized ✓')">🔒 Finalize Monthly Salary</button>
+</section>
+
+<section id="passbookfinal" class="page"><button class="vk-back" onclick="vkBack()" aria-label="Back">‹ Back</button>
+<h1>📒 Worker Passbook</h1>
+<div class="muted">एक worker का पूरा digital हिसाब</div>
+
+<div class="card" style="margin-top:12px">
+  <div class="row">
+    <div><b>👷 Ramesh Kumar</b><div class="muted">VSK-1045288 · Poha Mistri</div></div>
+    <span class="pill">Active</span>
+  </div>
+  <div class="grid" style="margin-top:12px">
+    <div class="stat"><b>₹48,000</b><span>Total Earned</span></div>
+    <div class="stat"><b>₹8,000</b><span>Advance</span></div>
+    <div class="stat"><b>₹30,000</b><span>Paid</span></div>
+    <div class="stat"><b class="green">₹10,000</b><span>Balance</span></div>
+  </div>
+</div>
+
+<div class="card" style="margin-top:10px">
+  <div class="row"><b>📅 Attendance</b><span>28 Days</span></div>
+  <div class="list row"><span>Present</span><b>26</b></div>
+  <div class="list row"><span>Half Day</span><b>1</b></div>
+  <div class="list row"><span>Leave</span><b>1</b></div>
+</div>
+
+<div class="card" style="margin-top:10px">
+  <div class="row"><b>💼 Work Earnings</b><span>₹48,000</span></div>
+  <div class="list row"><span>Monthly Salary</span><b>₹30,000</b></div>
+  <div class="list row"><span>Other approved work</span><b>₹18,000</b></div>
+</div>
+
+<div class="card" style="margin-top:10px">
+  <div class="row"><b>💰 Money History</b><span>View All</span></div>
+  <div class="list row"><span>29 Aug · Payment</span><b class="green">+₹4,500</b></div>
+  <div class="list row"><span>26 Aug · Advance</span><b class="red">−₹2,000</b></div>
+  <div class="list row"><span>23 Aug · Payment</span><b class="green">+₹5,000</b></div>
+  <div class="list row"><span>18 Aug · Advance</span><b class="red">−₹1,000</b></div>
+</div>
+
+<div class="card" style="margin-top:10px">
+  <div class="row"><b>🏭 Employment History</b><span>Private</span></div>
+  <div class="list row"><span>Current</span><b>Demo Poha Mill</b></div>
+  <div class="list row"><span>Status</span><b>Active</b></div>
+  <div class="list row"><span>Worker Type</span><b>Poha Mistri</b></div>
+</div>
+
+<div class="card" style="margin-top:10px">
+  <div class="row"><b>📄 NOC</b><span class="pill">None Active</span></div>
+  <div class="muted" style="margin-top:7px">अगर applicable permanent-employment rule के तहत temporary work के लिए NOC चाहिए, तो इसी profile से request/verify किया जा सकेगा.</div>
+</div>
+
+<div class="card" style="margin-top:10px">
+  <b>🔐 History Protection</b>
+  <div class="muted" style="margin-top:7px">पुरानी attendance, advance और payment entries delete नहीं होंगी। Correction होने पर adjustment और audit trail बनेगा.</div>
+</div>
+
+<button class="primary" style="width:100%;margin-top:10px" onclick="alert('Passbook export/share: production में role-controlled PDF/print/share के साथ उपलब्ध होगा.')">📤 Export Passbook</button>
+</section>
+
+<section id="recoveryredflag" class="page"><button class="vk-back" onclick="vkBack()" aria-label="Back">‹ Back</button>
+<h1>🚩 Recovery & Review</h1>
+<div class="muted">Advance recovery · Red Flag · Association Committee</div>
+
+<div class="card" style="margin-top:12px">
+  <div class="row"><b>🔎 Open Recovery Cases</b><span class="pill">3</span></div>
+  <div class="list row"><span>Ramesh Kumar · VK-104528</span><b class="red">₹2,500</b></div>
+  <div class="muted" style="margin-top:5px">Advance outstanding · Last attendance: 28 Aug</div>
+  <div class="list row"><span>Mohan Lal · VK-10831</span><b class="red">₹1,200</b></div>
+  <div class="muted" style="margin-top:5px">Advance outstanding · Contact follow-up pending</div>
+  <button class="action" style="width:100%;margin-top:10px" onclick="alert('Recovery case खोलें → facts verify करें → contact attempt record करें → resolved या review में भेजें.')"><span>🔎</span>Open Recovery Queue</button>
+</div>
+
+<div class="card" style="margin-top:10px">
+  <div class="row"><b>🚩 New Red Flag</b><span class="pill">Private</span></div>
+  <div class="muted" style="margin:7px 0">Case type चुनें और केवल verified facts/evidence दर्ज करें.</div>
+  <div class="list row"><span>Advance लेकर गायब</span><b>Recovery</b></div>
+  <div class="list row"><span>Unauthorized temporary work</span><b>NOC</b></div>
+  <div class="list row"><span>Attendance / payment dispute</span><b>Dispute</b></div>
+  <div class="list row"><span>Other concern</span><b>Review</b></div>
+  <button class="primary" style="width:100%;margin-top:10px" onclick="alert('New case: Worker VKID + factual reason + evidence + contact details. आरोप को verified fact की तरह नहीं दिखाया जाएगा.')">+ Create Case</button>
+</div>
+
+<div class="card" style="margin-top:10px">
+  <div class="row"><b>📄 NOC / Network Check</b><span class="pill">Controlled</span></div>
+  <div class="muted" style="margin-top:7px">Relevant registered-network event मिलने पर system सिर्फ authorized owner/committee को जरूरी information दिखाएगा। दूसरे mill का private हिसाब नहीं.</div>
+  <button class="action" style="width:100%;margin-top:10px" onclick="alert('VKID verification → permanent employment → applicable NOC → validity → decision.')"><span>✓</span>Verify Worker Status</button>
+</div>
+
+<div class="card" style="margin-top:10px">
+  <div class="row"><b>🏢 Association Review</b><span class="pill">Committee</span></div>
+  <div class="list row"><span>Pending Review</span><b>2</b></div>
+  <div class="list row"><span>Evidence requested</span><b>1</b></div>
+  <div class="list row"><span>Closed</span><b>8</b></div>
+  <div class="muted" style="margin-top:7px">Committee facts/evidence देखकर decision record करेगी। App automatic guilt या automatic penalty नहीं लगाएगा.</div>
+</div>
+
+<div class="card" style="margin-top:10px">
+  <b>🔐 Case Lifecycle</b>
+  <div style="margin-top:7px;line-height:1.9;font-weight:700">
+  Open → Fact Check → Evidence → Worker/Mill Response → Committee Review → Decision → Recovery/Resolution → Close
+  </div>
+</div>
+
+<div class="notice"><b>Golden Rule:</b> Red Flag public blacklist नहीं है। Case confidential रहेगा और visibility role, mill scope और Association rules से नियंत्रित होगी.</div>
+</section>
+
+<section id="associationadmin" class="page"><button class="vk-back" onclick="vkBack()" aria-label="Back">‹ Back</button>
+<h1>🏢 Association Admin</h1>
+<div class="muted">Rules · Committee · Violations · Governance</div>
+
+<div class="card" style="margin-top:12px">
+  <div class="row"><b>⚙️ Active Rules</b><span class="pill">5</span></div>
+  <div class="list row"><span>Permanent worker → other mill</span><b>🔴 NOC Required</b></div>
+  <div class="list row"><span>Missing NOC → first event</span><b>🟡 Review</b></div>
+  <div class="list row"><span>Confirmed repeat violation</span><b>🏢 Committee</b></div>
+  <div class="list row"><span>Public blacklist</span><b>OFF</b></div>
+  <div class="list row"><span>Automatic penalty</span><b>OFF</b></div>
+</div>
+
+<div class="card" style="margin-top:10px">
+  <b>🛠️ Rule Configuration</b>
+  <div class="muted" style="margin:7px 0">Association rules configurable हैं; changes future cases पर लागू होंगे और version history में सुरक्षित रहेंगे.</div>
+  <button class="action" style="width:100%" onclick="alert('Rule Editor: NOC requirement, review threshold, escalation path और penalty policy configure की जा सकती है. हर publish पर rule version + admin + time audit होगा.')"><span>⚙️</span>Open Rule Editor</button>
+</div>
+
+<div class="card" style="margin-top:10px">
+  <div class="row"><b>📥 Committee Queue</b><span class="pill">3</span></div>
+  <div class="list row"><span>NOC violation review</span><b>2</b></div>
+  <div class="list row"><span>Advance recovery dispute</span><b>1</b></div>
+  <button class="action" style="width:100%;margin-top:10px" onclick="alert('Committee case खोलें → evidence → response → hearing/review → decision → reasoned order.')"><span>👥</span>Open Committee Queue</button>
+</div>
+
+<div class="card" style="margin-top:10px">
+  <b>⚖️ Decision Options</b>
+  <div class="list row"><span>No violation / Close</span><b>✓</b></div>
+  <div class="list row"><span>Warning</span><b>⚠️</b></div>
+  <div class="list row"><span>Association-defined penalty</span><b>₹ / Rule</b></div>
+  <div class="list row"><span>Further review</span><b>↗</b></div>
+  <div class="muted" style="margin-top:7px">Decision evidence और reason के साथ record होगी. System सिर्फ Association की published policy के अनुसार workflow enforce करेगा.</div>
+</div>
+
+<div class="card" style="margin-top:10px">
+  <b>🧾 Rule Version History</b>
+  <div class="list row"><span>v1.3 · NOC policy</span><b>29 Aug</b></div>
+  <div class="list row"><span>v1.2 · Review threshold</span><b>12 Aug</b></div>
+  <div class="list row"><span>v1.1 · Penalty policy</span><b>01 Aug</b></div>
+</div>
+
+<div class="card" style="margin-top:10px">
+  <b>🔐 Governance Controls</b>
+  <div class="muted" style="margin-top:7px">Rule publish केवल authorized Association Admin करेगा. Sensitive changes के लिए 2-person approval रखा जा सकता है. हर publish/decision immutable audit trail में जाएगा.</div>
+</div>
+
+<div class="notice"><b>Core principle:</b> Association decides the rules and decisions. Vishwakarmaa provides identity, evidence, workflow, notifications and audit — <b>automatic punishment नहीं.</b></div>
+</section>
+
+<section id="notifications" class="page"><button class="vk-back" onclick="vkBack()" aria-label="Back">‹ Back</button>
+<h1>🔔 Smart Notifications</h1>
+<div class="muted">सिर्फ जरूरी सूचना · सही व्यक्ति · सही समय</div>
+
+<div class="card" style="margin-top:12px">
+  <div class="row"><b>🚨 Immediate</b><span class="pill">NOW</span></div>
+  <div class="list row"><span>🚩 NOC/Red Flag Review Required</span><b>Owner</b></div>
+  <div class="list row"><span>📢 Urgent Owner Order</span><b>Manager</b></div>
+  <div class="list row"><span>🔐 Security event</span><b>Owner/Admin</b></div>
+</div>
+
+<div class="card" style="margin-top:10px">
+  <div class="row"><b>⏰ Scheduled</b><span class="pill">AUTO</span></div>
+  <div class="list row"><span>📋 Daily Mill Report</span><b>Day Close</b></div>
+  <div class="list row"><span>📄 NOC expiry reminder</span><b>Before expiry</b></div>
+  <div class="list row"><span>💰 Weekly settlement ready</span><b>Week Close</b></div>
+</div>
+
+<div class="card" style="margin-top:10px">
+  <div class="row"><b>🔕 Routine — No Notification</b><span class="pill">QUIET</span></div>
+  <div class="list row"><span>Normal attendance</span><b>Silent</b></div>
+  <div class="list row"><span>Normal payment entry</span><b>Silent</b></div>
+  <div class="list row"><span>Routine work entry</span><b>Silent</b></div>
+</div>
+
+<div class="card" style="margin-top:10px">
+  <b>🎯 Notification Routing</b>
+  <div class="list row"><span>Owner</span><b>Action Required</b></div>
+  <div class="list row"><span>Manager</span><b>Assigned Work</b></div>
+  <div class="list row"><span>Accounts</span><b>Settlement/Payment</b></div>
+  <div class="list row"><span>Association</span><b>Committee Cases</b></div>
+</div>
+
+<div class="card" style="margin-top:10px">
+  <b>⚙️ Preferences</b>
+  <div class="muted" style="margin:7px 0">User urgent alerts को mute नहीं कर सकता; routine alerts individually control किए जा सकते हैं. Critical security/committee notifications policy के अनुसार protected रहेंगे.</div>
+  <button class="action" style="width:100%" onclick="alert('Notification preferences saved (demo). Production में device-wise push token और server-side preferences होंगे.')"><span>✓</span>Save Preferences</button>
+</div>
+
+<div class="notice"><b>Golden rule:</b> Notification तभी जब user को कोई action लेना हो या information समय-sensitive हो. बाकी activity app के अंदर history में रहेगी.</div>
+</section>
+
+<section id="backupsecurity" class="page"><button class="vk-back" onclick="vkBack()" aria-label="Back">‹ Back</button>
+<h1>☁️ Backup & Security</h1>
+<div class="muted">Data सुरक्षित · Recoverable · Audit protected</div>
+
+<div class="card" style="margin-top:12px">
+  <div class="row"><b>☁️ Backup Status</b><span class="pill">Healthy</span></div>
+  <div class="list row"><span>Last local export</span><b>Not exported</b></div>
+  <div class="list row"><span>Cloud backup</span><b>Production phase</b></div>
+  <div class="list row"><span>Pending sync</span><b>0</b></div>
+</div>
+
+<div class="card" style="margin-top:10px">
+  <b>🛡️ 3-Layer Protection</b>
+  <div class="list row"><span>Device</span><b>Encrypted local queue</b></div>
+  <div class="list row"><span>Server</span><b>Encrypted database</b></div>
+  <div class="list row"><span>Backup</span><b>Separate recovery copy</b></div>
+</div>
+
+<div class="card" style="margin-top:10px">
+  <b>🔐 Security Controls</b>
+  <div class="list row"><span>Role permissions</span><b>ON</b></div>
+  <div class="list row"><span>Audit trail</span><b>ON</b></div>
+  <div class="list row"><span>Device revoke</span><b>Available</b></div>
+  <div class="list row"><span>Silent deletion</span><b>BLOCKED</b></div>
+</div>
+
+<div class="card" style="margin-top:10px">
+  <b>🚨 Recovery Plan</b>
+  <div class="muted" style="margin:7px 0">अगर phone खराब हो जाए, चोरी हो जाए या data corrupt हो जाए:</div>
+  <div style="line-height:1.9;font-weight:700">
+  New Device → Login → Verify Owner → Select Mill → Restore Latest Safe Backup → Sync Pending Events → Audit Check
+  </div>
+</div>
+
+<div class="card" style="margin-top:10px">
+  <b>🧪 Backup Test</b>
+  <div class="muted" style="margin:7px 0">Backup होना पर्याप्त नहीं है; restore भी periodically test होना चाहिए.</div>
+  <button class="action" style="width:100%" onclick="alert('Demo: backup integrity check passed ✓\\nProduction: isolated restore test + checksum verification + recovery report.')"><span>✓</span>Run Backup Integrity Check</button>
+</div>
+
+<div class="notice"><b>Golden Rule:</b> Backup और audit दोनों अलग सुरक्षा layers हैं। Backup में corrupted/deleted data को blindly overwrite नहीं किया जाएगा; recovery point चुना जाएगा और restore action भी audit होगा.</div>
+</section>
+
+<section id="masterdashboard" class="page"><button class="vk-back" onclick="vkBack()" aria-label="Back">‹ Back</button>
+<h1>🏭 Vishwakarmaa</h1>
+<div class="muted">Factory Attendance · Master Pilot Dashboard</div>
+<div class="grid" style="margin-top:12px">
+<button class="action" onclick="show('attendance')"><span>📅</span>आज की हाजिरी<br><small>32 / 36</small></button>
+<button class="action" onclick="show('reja')"><span>👷</span>Reja / Coolie<br><small>8 / 10</small></button>
+<button class="action orangebg" onclick="show('hamal')"><span>👥</span>Hamal<br><small>आज का काम</small></button>
+<button class="action" onclick="show('calculations')"><span>🧮</span>आज का हिसाब<br><small>Live</small></button>
+</div>
+<div class="card" style="margin-top:12px">
+<div class="row"><b>📋 Owner Snapshot</b><span class="pill">TODAY</span></div>
+<div class="list row"><span>Permanent / Mistri attendance</span><b>32 / 36</b></div>
+<div class="list row"><span>Reja / Coolie</span><b>8 / 10</b></div>
+<div class="list row"><span>Hamal teams</span><b>2</b></div>
+<div class="list row"><span>Pending order</span><b>1</b></div>
+<div class="list row"><span>Action required</span><b class="red">2</b></div>
+</div>
+<div class="card" style="margin-top:10px">
+<b>⚡ Quick Actions</b>
+<button class="action" style="width:100%;margin-top:8px" onclick="quickAddWorker()"><span>➕</span>Register Worker / Reja</button>
+<button class="action" style="width:100%;margin-top:8px" onclick="show('dailyreportfinal')"><span>📋</span>Day Closing Report</button>
+<button class="action" style="width:100%;margin-top:8px" onclick="show('weeklysettlement')"><span>📅</span>Weekly Settlement</button>
+</div>
+<div class="notice"><b>Pilot rule:</b> पहले अपनी mill में old register + Vishwakarmaa parallel चलाओ। हर mismatch को 💡 Suggest से record करो।</div>
+</section>
+<section id="pilotcheck" class="page"><button class="vk-back" onclick="vkBack()" aria-label="Back">‹ Back</button>
+<h1>🧪 Pilot Checklist</h1>
+<div class="muted">Real mill test — 7 to 14 days</div>
+<div class="card" style="margin-top:12px">
+<div class="list row"><span>☐ Worker/VKID duplicate test</span><b>Identity</b></div>
+<div class="list row"><span>☐ Gate attendance</span><b>Daily</b></div>
+<div class="list row"><span>☐ Reja / Coolie entry</span><b>Daily</b></div>
+<div class="list row"><span>☐ Hamal standard rate</span><b>Daily</b></div>
+<div class="list row"><span>☐ Local one-day special rate + reason</span><b>Daily</b></div>
+<div class="list row"><span>☐ Advance / payment / balance</span><b>Money</b></div>
+<div class="list row"><span>☐ Offline → online sync</span><b>Network</b></div>
+<div class="list row"><span>☐ NOC check</span><b>Network</b></div>
+<div class="list row"><span>☐ Red Flag / recovery</span><b>Review</b></div>
+<div class="list row"><span>☐ Daily closing report</span><b>Owner</b></div>
+<div class="list row"><span>☐ Weekly lock / settlement</span><b>Finance</b></div>
+</div>
+<div class="notice">Pilot में real biometric/face integration, real OTP और cloud database को production security review के बाद जोड़ें।</div>
+</section>
+<section id="more" class="page"><button class="vk-back" onclick="vkBack()" aria-label="Back">‹ Back</button><h1>और</h1><div class="grid"><button class="action" onclick="show('redflags')"><span>🚩</span>Red Flag</button><button class="action" onclick="show('dailyreport')"><span>📋</span>आज की रिपोर्ट</button><button class="action" onclick="show('manager')"><span>👨‍💼</span>Manager View</button><button class="action" onclick="show('stafflink')"><span>👥</span>Mill Staff & Roles</button><button class="action" onclick="show('gate')"><span>🚪</span>Gate / Chowkidar</button><button class="action" onclick="show('accounts')"><span>💰</span>Accounts View</button><button class="action" onclick="show('backup')"><span>☁️</span>Backup & Sync</button><button class="action" onclick="show('v1map')"><span>🧭</span>V1 Feature Map</button><button class="action" onclick="show('calculations')"><span>🧮</span>Calculation Rules</button><button class="action" onclick="show('payment')"><span>💳</span>Payment & Settlement</button><button class="action" onclick="show('v1final')"><span>🛡️</span>V1 Final Blueprint</button><button class="action" onclick="show('dailyreportfinal')"><span>📋</span>Final Daily Report</button><button class="action" onclick="show('weeklysettlement')"><span>📅</span>Weekly Settlement</button><button class="action" onclick="show('monthlysalary')"><span>🗓️</span>Monthly Salary</button><button class="action" onclick="show('passbookfinal')"><span>📒</span>Worker Passbook</button><button class="action" onclick="show('recoveryredflag')"><span>🚩</span>Recovery & Review</button><button class="action" onclick="show('associationadmin')"><span>🏢</span>Association Admin</button><button class="action" onclick="show('notifications')"><span>🔔</span>Smart Notifications</button><button class="action" onclick="show('backupsecurity')"><span>☁️</span>Backup & Security</button><button class="action" onclick="show('shift')"><span>⏱️</span>Attendance Rules</button><button class="action" onclick="show('vkcard')"><span>🪪</span>Worker ID Card</button><button class="action" onclick="alert('बदलाव का रिकॉर्ड')"><span>🔐</span>बदलाव का रिकॉर्ड</button><button class="action" onclick="alert('Staff permissions')"><span>👑</span>Staff</button><button class="action" onclick="alert('Settings')"><span>⚙️</span>Settings</button></div><div class="card" style="margin-top:12px"><b>☁️ Data सुरक्षित है</b><div class="muted">Local data · Cloud sync production phase में</div></div></section>
+
+<section id="stafflink" class="page"><button class="vk-back" onclick="vkBack()" aria-label="Back">‹ Back</button>
+<h1>👥 Mill Staff & Roles</h1><div class="muted">Pilot में profiles इसी Mill से linked हैं</div>
+<div class="card" style="margin-top:12px"><div class="row"><div><b>👑 Mill Owner</b><div class="muted" id="staffOwnerName">Mill Owner</div></div><span class="pill">Full Access</span></div><button class="primary" style="width:100%;margin-top:10px" onclick="switchRole('Owner')">Owner View</button></div>
+<div class="card" style="margin-top:10px"><div class="row"><div><b>👨‍💼 Mill Manager</b><div class="muted" id="staffManagerName">Rajesh Manager</div></div><span class="pill">Linked</span></div><div class="muted" style="margin-top:8px">Same Mill ID · attendance, workers, hamal, orders और reports</div><button class="primary" style="width:100%;margin-top:10px" onclick="switchRole('Manager')">Manager View</button></div>
+<div class="notice">Production में बाद में login/OTP, server-side permissions और device linking जोड़े जाएंगे। अभी role switching केवल testing के लिए local है.</div></section>
+
+<nav class="bottom"><button class="active" onclick="show('home',this)"><b>🏠</b>होम</button><button onclick="show('people',this)"><b>👥</b>लोग</button><button onclick="show('attendance',this)"><b>📅</b>हाजिरी</button><button onclick="show('hisab',this)"><b>💰</b>हिसाब</button><button onclick="show('more',this)"><b>☰</b>और</button></nav>
+
+<div id="flagPopup" class="popup"><div class="modal"><div class="flag">🚩 RED FLAG</div><h2>Ramesh Kumar</h2><p>आपने इस worker को <b>₹80,000</b> advance दिया है।</p><p>सिस्टम में दूसरी registered mill में relevant activity मिली है।</p><button class="primary" style="width:100%" onclick="document.getElementById('flagPopup').classList.remove('show')">बाद में</button></div></div>
+</div>
+
+<style id="vk-v14-nav-css">.vk-back{display:flex;align-items:center;gap:6px;background:transparent;border:0;padding:4px 0 10px;font-weight:900;color:var(--vk-blue);font-size:15px}.vk-hint{display:block;font-size:10px;color:var(--vk-muted);margin-top:4px}.vk-red{color:var(--vk-red)!important}.page .vk-back{margin-bottom:2px}</style>
+<style>
+/* Vishwakarmaa V1.1 — unified pilot layer */
+:root{--vk-blue:#175fc7;--vk-green:#138a57;--vk-red:#b52838;--vk-orange:#b86b00;--vk-ink:#182235;--vk-muted:#718096;--vk-bg:#f5f7fb}
+button{font:inherit;cursor:pointer;border:0}.app{overflow-x:hidden}.tap{cursor:pointer}.card,.worker,.action{transition:transform .12s ease,box-shadow .12s ease}.card.tap:active,.worker.tap:active,.action:active{transform:scale(.985)}
+.vk-modal{position:fixed;inset:0;background:rgba(0,0,0,.52);display:none;align-items:flex-end;justify-content:center;padding:12px;z-index:10000}.vk-modal.show{display:flex}
+.vk-sheet{background:#fff;border-radius:22px 22px 14px 14px;width:min(620px,100%);max-height:90vh;overflow:auto;padding:18px;box-shadow:0 -10px 45px rgba(0,0,0,.22)}
+.vk-sheet h2{margin:0 0 5px}.vk-field{margin:10px 0}.vk-field label{display:block;font-size:12px;color:var(--vk-muted);font-weight:800;margin-bottom:5px}.vk-field input,.vk-field select,.vk-field textarea{width:100%;padding:13px;border:1px solid #dfe5ee;border-radius:12px;background:#fff;font:inherit}.vk-field textarea{min-height:80px;resize:vertical}.vk-actions{display:flex;gap:8px;margin-top:14px}.vk-actions button{flex:1}.vk-btn{width:100%;padding:13px;border-radius:12px;font-weight:800;margin-top:8px}.vk-primary{background:var(--vk-blue);color:#fff}.vk-secondary{background:#eef1f6;color:var(--vk-ink)}.vk-danger{background:#ffe5e8;color:var(--vk-red)}
+.vk-fab{position:fixed;right:14px;bottom:76px;z-index:9998;border-radius:25px;padding:12px 16px;background:var(--vk-blue);color:#fff;font-weight:900;box-shadow:0 7px 22px rgba(0,0,0,.22)}.vk-help{bottom:132px}.vk-toast{position:fixed;left:50%;bottom:22px;transform:translateX(-50%);z-index:10001;background:#182235;color:#fff;padding:11px 16px;border-radius:13px;display:none;font-weight:800;max-width:92%;text-align:center}.vk-toast.show{display:block}
+.vk-role{border:1px solid #dfe5ee;background:#fff;border-radius:11px;padding:9px 12px;font-weight:800}.vk-badge{display:inline-block;padding:5px 9px;border-radius:20px;background:#e9f7ef;color:var(--vk-green);font-size:11px;font-weight:800}.vk-badge.warn{background:#fff5e3;color:var(--vk-orange)}.vk-badge.danger{background:#ffe5e8;color:var(--vk-red)}.vk-mini{font-size:12px;color:var(--vk-muted)}.vk-empty{text-align:center;padding:24px;color:var(--vk-muted)}
+.vk-table{width:100%;border-collapse:collapse;font-size:13px}.vk-table th,.vk-table td{padding:10px 6px;border-bottom:1px solid #edf0f5;text-align:left}.vk-table th{color:var(--vk-muted);font-size:11px}
+</style>
+<div id="vkModal" class="vk-modal" onclick="if(event.target===this)closeVKModal()"><div id="vkSheet" class="vk-sheet"></div></div>
+<button class="vk-fab vk-help" onclick="vkStartTour()">❓ App kaise chalega?</button>
+<button class="vk-fab" onclick="vkQuickMenu()">⚡ Quick Test</button>
+<div id="vkToast" class="vk-toast"></div>
+<div class="card" style="margin:10px 16px;border:1px solid #d9e2f0;background:#f7faff"><b>V40 Testing Build</b><div class="muted" style="margin-top:4px">30 Aug architecture + V1.4 rechecked workflows. Local pilot data; production cloud/biometric अभी नहीं.</div></div>
+<script>
+(() => {
+  'use strict';
+  const KEY='vishwakarmaa_pilot_v11';
+  const OLD='vk_factory_pilot_v033';
+  const ROLES=['Owner','Partner','Manager','Supervisor','Gate','Accounts'];
+  const today=()=>new Date().toISOString().slice(0,10);
+  const now=()=>new Date().toISOString();
+  const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  const money=n=>'₹'+Number(n||0).toLocaleString('en-IN');
+  const initials=n=>String(n||'').trim().split(/\s+/).map(x=>x[0]).slice(0,2).join('').toUpperCase()||'W';
+  const defaultWorkers=[
+    {id:'VSK-1045288',name:'Ramesh Kumar',mobile:'',type:'Poha Mistri',rate:1000,status:'Active',createdAt:now(),advance:1500,present:true},
+    {id:'VSK-10831',name:'Mohan Lal',mobile:'',type:'Reja / Coolie',rate:800,status:'Active',createdAt:now(),advance:0,present:true},
+    {id:'VSK-10941',name:'Suresh Yadav',mobile:'',type:'Reja / Coolie',rate:800,status:'Active',createdAt:now(),advance:500,present:true},
+    {id:'VSK-12001',name:'Rajesh Kumar',mobile:'',type:'Head Mistri',rate:30000,status:'Active',createdAt:now(),advance:2000,present:true},
+    {id:'VSK-12002',name:'Ganesh',mobile:'',type:'Hamal',rate:0,status:'Active',createdAt:now(),advance:0,present:true},
+    {id:'VSK-12003',name:'Dinesh',mobile:'',type:'Hamal',rate:0,status:'Active',createdAt:now(),advance:0,present:true}
+  ];
+  const fresh={version:12,role:'Owner',online:navigator.onLine,mill:{id:'MILL-VK-001',name:'Vishwakarmaa Pilot Mill',location:'Bhatapara · Chhattisgarh',owner:'Mill Owner',manager:'Rajesh Manager'},users:[{id:'USR-OWNER-001',name:'Mill Owner',role:'Owner',millId:'MILL-VK-001'},{id:'USR-MANAGER-001',name:'Rajesh Manager',role:'Manager',millId:'MILL-VK-001'}],workers:defaultWorkers,attendance:[],advances:[],payments:[],hamal:[],hamalTeams:[],orders:[],redFlags:[],nocs:[],audit:[],pendingSync:0,rateList:{'पोहा काटा':1.30,'Loading':0.90,'कांटा + Loading':2.10},settings:{millName:'Vishwakarmaa Pilot Mill',weekStart:'Monday'}};
+  function migrate(){
+    let s=null;try{s=JSON.parse(localStorage.getItem(KEY)||'null')}catch{}
+    if(s)return normalize(s);
+    try{
+      const old=JSON.parse(localStorage.getItem(OLD)||'null');
+      if(old){const n=normalize({...fresh,...old,workers:(old.workers||[]).map(w=>({...w,type:w.type||w.role||'Reja / Coolie',advance:Number(w.advance||0),payment:Number(w.payment||0)}))});return n}
+    }catch{}
+    return normalize(fresh);
+  }
+  function normalize(s){
+    s.version=12;s.role=ROLES.includes(s.role)?s.role:'Owner';s.mill=s.mill||{id:'MILL-VK-001',name:'Vishwakarmaa Pilot Mill',location:'Bhatapara · Chhattisgarh',owner:'Mill Owner',manager:'Rajesh Manager'};s.users=Array.isArray(s.users)?s.users:[{id:'USR-OWNER-001',name:s.mill.owner,role:'Owner',millId:s.mill.id},{id:'USR-MANAGER-001',name:s.mill.manager,role:'Manager',millId:s.mill.id}];s.hamalTeams=Array.isArray(s.hamalTeams)?s.hamalTeams:[];s.nocs=Array.isArray(s.nocs)?s.nocs:[];s.workers=Array.isArray(s.workers)?s.workers:[];s.attendance=Array.isArray(s.attendance)?s.attendance:[];s.advances=Array.isArray(s.advances)?s.advances:[];s.payments=Array.isArray(s.payments)?s.payments:[];s.hamal=Array.isArray(s.hamal)?s.hamal:[];s.orders=Array.isArray(s.orders)?s.orders:[];s.redFlags=Array.isArray(s.redFlags)?s.redFlags:[];s.audit=Array.isArray(s.audit)?s.audit:[];s.pendingSync=Number(s.pendingSync||0);s.rateList=s.rateList||fresh.rateList;s.settings={...fresh.settings,...(s.settings||{})};return s;
+  }
+  let S=migrate();
+  function save(){localStorage.setItem(KEY,JSON.stringify(S));updateStatus();}
+  function log(action,detail){S.audit.unshift({at:now(),by:S.role,action,detail});if(S.audit.length>1000)S.audit.length=1000;save();}
+  function touch(){if(!S.online)S.pendingSync++;save();}
+  function toast(t){const e=document.getElementById('vkToast');e.textContent=t;e.classList.add('show');clearTimeout(window.__vkToast);window.__vkToast=setTimeout(()=>e.classList.remove('show'),2200)}
+  function updateStatus(){const e=document.getElementById('vkStatus');if(e){e.textContent=S.online?'● Online':'● Offline';e.classList.toggle('off',!S.online)}const sync=document.getElementById('syncStatus');if(sync)sync.textContent=S.online?(S.pendingSync?'Online · '+S.pendingSync+' pending':'Online · Synced'):'Offline · '+S.pendingSync+' pending';}
+  function allowed(a){const map={Owner:['all'],Partner:['attendance','people','orders','reports','hamal'],Manager:['attendance','people','orders','hamal','reports'],Supervisor:['attendance','hamal','orders'],Gate:['attendance','verify'],Accounts:['ledger','payment','reports']};const p=map[S.role]||[];return p.includes('all')||p.includes(a)}
+  function guard(a){if(!allowed(a)){toast('इस काम की permission आपके role को नहीं है।');return false}return true}
+  function worker(id){return S.workers.find(w=>w.id===id)}
+  function att(id,d=today()){return S.attendance.find(a=>a.workerId===id&&a.date===d)}
+  function earned(w,d=today()){
+    if(w.type==='Hamal')return S.hamal.filter(x=>x.workerId===w.id&&x.at.slice(0,10)===d).reduce((n,x)=>n+Number(x.amount||0),0);
+    const a=att(w.id,d);if(!a)return 0;if(a.status==='P')return Number(w.rate||0);if(a.status==='H')return Number(w.rate||0)/2;return 0;
+  }
+  function totals(w){
+    const earn=S.attendance.filter(a=>a.workerId===w.id).reduce((n,a)=>n+(a.status==='P'?Number(w.rate||0):a.status==='H'?Number(w.rate||0)/2:0),0)+S.hamal.filter(x=>x.workerId===w.id).reduce((n,x)=>n+Number(x.amount||0),0);
+    const adv=S.advances.filter(x=>x.workerId===w.id).reduce((n,x)=>n+Number(x.amount||0),0);const pay=S.payments.filter(x=>x.workerId===w.id).reduce((n,x)=>n+Number(x.amount||0),0);return {earn,adv,pay,balance:Math.max(0,earn-adv-pay)};
+  }
+  function openModal(title,body){document.getElementById('vkSheet').innerHTML='<div class="row"><div><h2>'+title+'</h2></div><button class="vk-role" onclick="closeVKModal()">✕</button></div>'+body;document.getElementById('vkModal').classList.add('show')}
+  window.closeVKModal=()=>document.getElementById('vkModal').classList.remove('show');
+  let __vkNavReady=false;let __vkHistory=[];window.vkBack=()=>{if(document.getElementById('vkModal')?.classList.contains('show')){closeVKModal();return}if(__vkHistory.length>1){__vkHistory.pop();const prev=__vkHistory[__vkHistory.length-1];__vkShow(prev,false)}else{__vkShow('home',false)}};function __vkShow(id,push=true,btn){const p=document.getElementById(id);if(!p)return toast('Screen नहीं मिली: '+id);const cur=document.querySelector('.page.active')?.id||'home';if(push&&cur!==id){__vkHistory.push(id);try{history.pushState({vk:id},'', '#'+id)}catch{}}document.querySelectorAll('.page').forEach(x=>x.classList.remove('active'));p.classList.add('active');document.querySelectorAll('.bottom button').forEach(x=>x.classList.remove('active'));if(btn)btn.classList.add('active');window.scrollTo(0,0);renderAll()}window.show=(id,btn)=>__vkShow(id,true,btn);window.addEventListener('popstate',e=>{if(__vkHistory.length>1){__vkHistory.pop();__vkShow(__vkHistory[__vkHistory.length-1],false)}else __vkShow('home',false)});
+  function currentPage(){return document.querySelector('.page.active')?.id||'home'}
+  window.filterPeople=q=>renderPeople(q||'');
+  function renderPeople(q=''){const el=document.getElementById('peopleList');if(!el)return;const z=String(q).toLowerCase();const arr=S.workers.filter(w=>(w.name+' '+w.mobile+' '+w.id+' '+w.type).toLowerCase().includes(z));el.innerHTML=arr.length?arr.map(w=>{const a=att(w.id);return '<div class="worker tap" onclick="openWorker(\''+esc(w.id)+'\')"><div class="avatar">'+initials(w.name)+'</div><div class="info"><b>'+esc(w.name)+'</b><div class="muted">'+esc(w.id)+' · '+esc(w.type)+'</div></div><span class="pill">'+(a?.status==='P'?'Present':a?.status==='H'?'Half Day':'Not marked')+'</span></div>'}).join(''):'<div class="vk-empty">कोई worker नहीं मिला।</div>'}
+  function renderAtt(){const el=document.getElementById('attList');if(!el)return;const d=today();const list=S.workers.filter(w=>w.status!=='Inactive');const p=list.filter(w=>att(w.id,d)?.status==='P').length,h=list.filter(w=>att(w.id,d)?.status==='H').length;const sum=document.getElementById('attSummary');if(sum)sum.textContent=`${p} / ${list.length} आए`;const date=document.getElementById('attDate');if(date)date.textContent=new Date().toLocaleDateString('hi-IN',{day:'2-digit',month:'short',year:'numeric'});el.innerHTML=list.length?list.map(w=>{const a=att(w.id,d);return '<div class="worker"><div class="avatar">'+initials(w.name)+'</div><div class="info"><b>'+esc(w.name)+'</b><div class="muted">'+esc(w.type)+' · '+money(w.rate)+(w.type==='Hamal'?' work-based':'/day')+'</div></div><button class="att p" onclick="markAttendance(\''+esc(w.id)+'\',\'P\')">'+(a?.status==='P'?'✓ आया':'आया')+'</button><button class="att a" onclick="markAttendance(\''+esc(w.id)+'\',\'A\')">'+(a?.status==='A'?'✓ नहीं':'नहीं')+'</button></div>'}).join(''):'<div class="vk-empty">पहले worker register करें।</div>'}
+  window.markAttendance=(id,status)=>{if(!guard('attendance'))return;const w=worker(id);if(!w)return;const d=today();let a=att(id,d);const old=a?.status||'—';if(a)a.status=status;else S.attendance.push({workerId:id,date:d,status,at:now(),by:S.role});log('ATTENDANCE',`${w.name}: ${old} → ${status}`);touch();toast('हाजिरी save हो गई ✓');renderAll()};
+  window.addAttendance=(id,p)=>markAttendance(id,p?'P':'A');
+  window.quickAddWorker=()=>openRegister();
+  function openRegister(){if(!guard('people'))return;openModal('👷 नया Worker / VKID',`<div class="vk-field"><label>नाम *</label><input id="fName" placeholder="पूरा नाम"></div><div class="vk-field"><label>मोबाइल</label><input id="fMobile" inputmode="numeric" maxlength="10" placeholder="10 digit mobile"></div><div class="vk-field"><label>Worker Type *</label><select id="fType"><option>Reja / Coolie</option><option>Poha Mistri</option><option>Head Mistri</option><option>Hamal</option><option>Permanent</option></select></div><div class="vk-field"><label>Pay Basis</label><select id="fBasis"><option value="daily">Daily</option><option value="monthly">Monthly Salary</option><option value="work">Work Based</option></select></div><div class="vk-field"><label>Rate / Salary</label><input id="fRate" inputmode="decimal" placeholder="₹"></div><div class="vk-actions"><button class="vk-btn vk-secondary" onclick="closeVKModal()">Cancel</button><button class="vk-btn vk-primary" onclick="saveWorker()">Save & Generate VKID</button></div>`)}
+  window.saveWorker=()=>{const name=fName.value.trim(),mobile=fMobile.value.trim(),type=fType.value,rate=Number(fRate.value)||0,basis=fBasis.value;if(!name)return toast('नाम जरूरी है');if(mobile&&!/^\d{10}$/.test(mobile))return toast('Mobile 10 digits होना चाहिए');if(mobile&&S.workers.some(w=>w.mobile===mobile))return toast('यह mobile पहले से registered है');if(S.workers.some(w=>w.name.trim().toLowerCase()===name.toLowerCase()&&w.status!=='Inactive'))return toast('इस नाम का active worker पहले से है');const id='VSK-'+String(Date.now()).slice(-8);S.workers.push({id,name,mobile,type,rate,payBasis:basis,status:'Active',employmentStatus:type==='Permanent'?'Permanent':'None',millId:S.mill.id,createdAt:now(),advance:0,present:false});log('WORKER_CREATED',`${name} → ${id}`);touch();closeVKModal();toast('Worker saved · '+id);renderAll()};
+  window.openWorker=id=>{const w=worker(id);if(!w)return;const t=totals(w);openModal('📒 '+esc(w.name),`<div class="card"><div class="row"><div><b>${esc(w.id)}</b><div class="muted">${esc(w.type)}</div></div><div class="avatar">${initials(w.name)}</div></div><div class="grid" style="margin-top:12px"><div><small>कमाई</small><div class="big">${money(t.earn)}</div></div><div><small>Advance</small><div class="big red">${money(t.adv)}</div></div><div><small>Payment</small><div class="big">${money(t.pay)}</div></div><div><small>बाकी</small><div class="big green">${money(t.balance)}</div></div></div></div><button class="vk-btn vk-primary" onclick="addAdvanceForm('${esc(w.id)}')">＋ Advance</button><button class="vk-btn vk-primary" onclick="addPaymentForm('${esc(w.id)}')">💳 Payment</button>${w.employmentStatus==='Permanent'?`<button class="vk-btn vk-secondary" onclick="requestNOC('${esc(w.id)}')">📄 Request NOC</button>`:''}<button class="vk-btn vk-secondary" onclick="closeVKModal()">Close</button>`)};
+  window.addAdvanceForm=id=>openMoneyForm('Advance',id);
+  window.addPaymentForm=id=>openMoneyForm('Payment',id);
+  function workerSelect(id=''){return S.workers.map(w=>`<option value="${esc(w.id)}" ${w.id===id?'selected':''}>${esc(w.name)} — ${esc(w.id)}</option>`).join('')||'<option value="">No workers</option>'}
+  function openMoneyForm(kind,id=''){const action=kind==='Advance'?'ledger':'payment';if(!guard(action))return;openModal(kind==='Advance'?'💰 Advance':'💳 Payment',`<div class="vk-field"><label>Worker</label><select id="mWorker">${workerSelect(id)}</select></div><div class="vk-field"><label>Amount *</label><input id="mAmount" inputmode="decimal" placeholder="₹"></div>${kind==='Advance'?'<div class="vk-field"><label>Reason</label><input id="mReason" placeholder="क्यों दिया?"></div>':'<div class="vk-field"><label>Method</label><select id="mMethod"><option>Cash</option><option>UPI</option><option>Bank</option></select></div><div class="vk-field"><label>Reference / note</label><input id="mRef" placeholder="Optional"></div>'}<div class="vk-actions"><button class="vk-btn vk-secondary" onclick="closeVKModal()">Cancel</button><button class="vk-btn vk-primary" onclick="saveMoney('${kind}')">Save</button></div>`)}
+  window.saveMoney=kind=>{const id=mWorker.value,n=Number(mAmount.value);if(!id||n<=0)return toast('Worker और valid amount जरूरी है');const w=worker(id);if(kind==='Advance'){S.advances.push({workerId:id,amount:n,reason:mReason.value.trim(),at:now(),by:S.role});log('ADVANCE',`${w.name} · ${money(n)}`)}else{const method=mMethod.value,ref=mRef.value.trim();if(ref&&S.payments.some(x=>x.ref===ref))return toast('Duplicate payment reference');S.payments.push({workerId:id,amount:n,mode:method,ref,at:now(),by:S.role});log('PAYMENT',`${w.name} · ${money(n)} · ${method}`)}touch();closeVKModal();toast(kind+' save हो गया ✓');renderAll()};
+  window.addAdvance=(id,amount,reason='')=>{if(!guard('ledger'))return;const w=worker(id);if(!w||Number(amount)<=0)return;S.advances.push({workerId:id,amount:Number(amount),reason,at:now(),by:S.role});log('ADVANCE',`${w.name} · ${money(amount)}`);touch()};
+  window.addPayment=(id,amount,method='Cash')=>{if(!guard('payment'))return;const w=worker(id);if(!w||Number(amount)<=0)return;S.payments.push({workerId:id,amount:Number(amount),mode:method,ref:'',at:now(),by:S.role});log('PAYMENT',`${w.name} · ${money(amount)} · ${method}`);touch()};
+  window.workerBalance=w=>totals(w).balance;
+  window.editRate=()=>{if(!guard('hamal'))return;const work=prompt('काम का नाम','पोहा काटा');if(!work)return;const current=S.rateList[work]??1.3;const r=Number(prompt('आज का special rate',String(current)));if(!Number.isFinite(r)||r<0)return;const reason=prompt('कारण','Local one-day Hamal');S.rateList[work]=r;log('RATE_CHANGE',`${work} ₹${r} · ${reason||'No reason'}`);touch();toast('Rate record हो गया ✓');renderAll()};
+  window.editSpecialRate=editRate;
+  window.saveHamal=()=>{};
+  function openHamalTeam(){if(!guard('hamal'))return;openModal('👥 नई Hamal Team',`<div class="vk-field"><label>Team Name *</label><input id="tName" placeholder="Shankar Hamal Toli"></div><div class="vk-field"><label>Leader</label><select id="tLeader">${workerSelect()}</select></div><div class="vk-field"><label>Members (comma separated names)</label><input id="tMembers" placeholder="Mohan, Suresh, Raju"></div><div class="vk-field"><label>Team Size</label><input id="tSize" inputmode="numeric" placeholder="6-15"></div><div class="vk-field"><label>Standard Rate / Work</label><input id="tRate" inputmode="decimal" placeholder="₹"></div><div class="vk-actions"><button class="vk-btn vk-secondary" onclick="closeVKModal()">Cancel</button><button class="vk-btn vk-primary" onclick="saveHamalTeam()">Save Team</button></div>`)}
+window.openHamalTeam=openHamalTeam;window.saveHamalTeam=()=>{const name=tName.value.trim(),leader=tLeader.value,size=Number(tSize.value)||0;if(!name||size<1)return toast('Team name और size जरूरी है');if(size>15)return toast('Hamal team max 15');S.hamalTeams.push({id:'HT-'+Date.now(),name,leaderId:leader,members:tMembers.value.split(',').map(x=>x.trim()).filter(Boolean),size,rate:Number(tRate.value)||0,status:'Active',millId:S.mill.id,at:now(),by:S.role});log('HAMAL_TEAM_CREATED',`${name} · ${size} members`);touch();closeVKModal();toast('Hamal team save हो गई ✓');renderAll()};
+function openHamal(){if(!guard('hamal'))return;openModal('👥 Hamal का काम',`<div class="vk-field"><label>Hamal Worker / Leader</label><select id="hWorker">${workerSelect()}</select></div><div class="vk-field"><label>काम</label><select id="hWork"><option>पोहा काटा</option><option>Loading</option><option>कांटा + Loading</option><option>अन्य</option></select></div><div class="vk-field"><label>Quantity</label><input id="hQty" inputmode="decimal" placeholder="जैसे 100"></div><div class="vk-field"><label>Rate / unit</label><input id="hRate" inputmode="decimal" placeholder="₹" oninput="" ></div><div class="vk-field"><label>Note</label><input id="hNote" placeholder="Optional"></div><div class="vk-actions"><button class="vk-btn vk-secondary" onclick="closeVKModal()">Cancel</button><button class="vk-btn vk-primary" onclick="saveHamalWork()">Save Work</button></div>`)}
+  window.openHamal=openHamal;
+  window.saveHamalWork=()=>{const id=hWorker.value,q=Number(hQty.value),r=Number(hRate.value);if(!id||q<=0||r<0)return toast('Worker, quantity और rate जरूरी है');const w=worker(id);S.hamal.push({workerId:id,work:hWork.value,qty:q,rate:r,amount:q*r,note:hNote.value.trim(),at:now(),by:S.role});log('HAMAL_WORK',`${w.name} · ${hWork.value} · ${q} × ${money(r)} = ${money(q*r)}`);touch();closeVKModal();toast('Hamal work save हो गया ✓');renderAll()};
+  window.vkHamal=openHamal;
+  function openOrder(){if(!guard('orders'))return;openModal('📢 नया आदेश / काम',`<div class="vk-field"><label>काम / Requirement *</label><input id="oTitle" placeholder="500 बोरी पोहा तैयार रखना है"></div><div class="vk-field"><label>Quantity</label><input id="oQty" inputmode="decimal" placeholder="500"></div><div class="vk-field"><label>Deadline</label><input id="oDue" type="date"></div><div class="vk-field"><label>Note</label><textarea id="oNote" placeholder="Quality / priority / location"></textarea></div><div class="vk-actions"><button class="vk-btn vk-secondary" onclick="closeVKModal()">Cancel</button><button class="vk-btn vk-primary" onclick="saveOrder()">Save Order</button></div>`)}
+  window.saveOrder=()=>{const title=oTitle.value.trim(),qty=Number(oQty.value)||0;if(!title)return toast('Order title जरूरी है');S.orders.push({id:'ORD-'+Date.now(),title,qty,due:oDue.value,note:oNote.value.trim(),status:'Open',createdAt:now(),by:S.role});log('ORDER_CREATED',title);touch();closeVKModal();toast('Order save हो गया ✓');renderAll()};
+  window.openOrder=openOrder;
+  function openNotifications(){const flags=S.redFlags.filter(x=>x.status==='Open').length,orders=S.orders.filter(x=>x.status==='Open').length;openModal('🔔 Notifications',`<div class="card"><b>🚩 Red Flag</b><div class="muted">${flags} open case</div></div><div class="card" style="margin-top:8px"><b>📢 Orders</b><div class="muted">${orders} pending order</div></div><div class="card" style="margin-top:8px"><b>☁️ Sync</b><div class="muted">${S.pendingSync} pending local changes</div></div><button class="vk-btn vk-secondary" onclick="closeVKModal()">Close</button>`)}
+  window.openNotifications=openNotifications;
+  function roleSheet(){openModal('👤 Role / View',`<div class="muted">Pilot में role बदलकर अलग screens test करें। Production में role server-side enforce होगा.</div>${ROLES.map(r=>`<button class="vk-btn ${r===S.role?'vk-primary':'vk-secondary'}" onclick="switchRole('${r}')">${r}${r===S.role?' ✓':''}</button>`).join('')}`)}
+  window.openRoleSheet=roleSheet;window.switchRole=r=>{if(!ROLES.includes(r))return;S.role=r;log('ROLE_SWITCH',r);closeVKModal();toast('अब '+r+' view');renderAll()};window.setRole=window.switchRole;
+  window.showAudit=()=>{if(!guard('reports'))return;const rows=S.audit.slice(0,50).map(x=>`<tr><td>${esc(new Date(x.at).toLocaleString('en-IN'))}</td><td>${esc(x.by)}</td><td>${esc(x.action)}</td><td>${esc(x.detail)}</td></tr>`).join('');openModal('🔐 बदलाव का रिकॉर्ड',`<div style="overflow:auto"><table class="vk-table"><tr><th>समय</th><th>किसने</th><th>Action</th><th>Detail</th></tr>${rows||'<tr><td colspan="4">कोई record नहीं</td></tr>'}</table></div><button class="vk-btn vk-secondary" onclick="closeVKModal()">Close</button>`)};
+  function openRedFlag(){if(!guard('reports'))return;openModal('🚩 नया Red Flag',`<div class="vk-field"><label>Worker</label><select id="rfWorker">${workerSelect()}</select></div><div class="vk-field"><label>Case type</label><select id="rfType"><option>Unauthorized work</option><option>Advance recovery</option><option>Attendance dispute</option><option>Financial dispute</option><option>Other concern</option></select></div><div class="vk-field"><label>Short detail</label><textarea id="rfDetail"></textarea></div><div class="vk-actions"><button class="vk-btn vk-secondary" onclick="closeVKModal()">Cancel</button><button class="vk-btn vk-primary" onclick="saveRedFlag()">Save for Review</button></div>`)}
+  window.openRedFlag=openRedFlag;window.saveRedFlag=()=>{const id=rfWorker.value;if(!id)return toast('Worker चुनें');S.redFlags.push({id:'RF-'+Date.now(),workerId:id,type:rfType.value,detail:rfDetail.value.trim(),status:'Open',createdAt:now(),by:S.role});log('RED_FLAG_CREATED',`${id} · ${rfType.value}`);touch();closeVKModal();toast('Case review में चला गया');renderAll()};
+  window.showFlag=()=>openRedFlag();
+  function openPassbook(id){const w=worker(id||S.workers[0]?.id);if(!w)return;const t=totals(w);const entries=[];S.attendance.filter(a=>a.workerId===w.id).slice(-10).forEach(a=>entries.push({at:a.date,label:'Attendance '+a.status,amount:a.status==='P'?w.rate:a.status==='H'?w.rate/2:0}));S.advances.filter(a=>a.workerId===w.id).slice(-10).forEach(a=>entries.push({at:a.at.slice(0,10),label:'Advance',amount:-a.amount}));S.payments.filter(a=>a.workerId===w.id).slice(-10).forEach(a=>entries.push({at:a.at.slice(0,10),label:'Payment',amount:-a.amount}));entries.sort((a,b)=>b.at.localeCompare(a.at));openModal('📒 Worker Passbook',`<div class="card"><div class="row"><div><div class="big">${esc(w.name)}</div><div class="muted">${esc(w.id)} · ${esc(w.type)}</div></div><div class="avatar">${initials(w.name)}</div></div><div class="grid" style="margin-top:12px"><div><small>कमाई</small><div class="big">${money(t.earn)}</div></div><div><small>Advance</small><div class="big red">${money(t.adv)}</div></div><div><small>Payment</small><div class="big">${money(t.pay)}</div></div><div><small>बाकी</small><div class="big green">${money(t.balance)}</div></div></div></div><h3>Recent Diary</h3>${entries.length?entries.map(e=>`<div class="list row"><span>${esc(e.at)} · ${esc(e.label)}</span><b class="${e.amount<0?'red':'green'}">${e.amount<0?'−':'+'}${money(Math.abs(e.amount))}</b></div>`).join(''):'<div class="vk-empty">अभी कोई transaction नहीं।</div>'}<button class="vk-btn vk-primary" onclick="addAdvanceForm('${esc(w.id)}')">＋ Advance</button><button class="vk-btn vk-primary" onclick="addPaymentForm('${esc(w.id)}')">💳 Payment</button>${w.employmentStatus==='Permanent'?`<button class="vk-btn vk-secondary" onclick="requestNOC('${esc(w.id)}')">📄 Request NOC</button>`:''}<button class="vk-btn vk-secondary" onclick="closeVKModal()">Close</button>`)}
+  window.requestNOC=id=>{const w=worker(id);if(!w)return;if(w.employmentStatus!=='Permanent')return toast('इस worker का active permanent status नहीं है');const reason=prompt('Temporary work का reason','One day work');if(!reason)return;S.nocs.push({id:'NOC-'+Date.now(),workerId:id,fromMillId:S.mill.id,toMillId:'LOCAL-TEST-MILL-002',reason,status:'Pending',createdAt:now(),by:S.role});log('NOC_REQUEST',`${w.name} · ${reason}`);touch();toast('NOC request local test में बन गई ✓');renderAll()};
+window.approveNOC=id=>{const n=S.nocs.find(x=>x.id===id);if(!n)return;n.status='Approved';n.approvedAt=now();n.approvedBy=S.role;log('NOC_APPROVED',n.id);touch();toast('NOC approved ✓');renderAll()};
+window.openPassbook=openPassbook;
+  window.makePayment=()=>{if(!guard('payment'))return;openPaymentFromDefault()};
+  function openPaymentFromDefault(){const w=S.workers[0];if(w)openMoneyForm('Payment',w.id)}
+  function syncNow(){if(!S.online)return toast('Internet नहीं है');const n=S.pendingSync;S.pendingSync=0;log('SYNC_SIMULATED',`${n} local changes prepared for future server sync`);toast(n?'Local test sync cleared ✓':'Already synced ✓');renderAll()}
+  window.syncNow=syncNow;
+  window.queueOfflineChange=()=>{touch();toast('Offline change queued')};
+  function backup(){const blob=new Blob([JSON.stringify(S,null,2)],{type:'application/json'});const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='vishwakarmaa-backup-'+today()+'.json';a.click();setTimeout(()=>URL.revokeObjectURL(a.href),1000);log('BACKUP_EXPORT','Local JSON backup exported');toast('Backup file तैयार है ✓')}
+  window.backupData=backup;
+  function reset(){if(!confirm('Pilot data साफ करना है? यह इस device की local entries हटाएगा।'))return;localStorage.removeItem(KEY);location.reload()}
+  window.vkResetPilot=reset;
+  window.vkDemoData=()=>{if(!confirm('Demo data जोड़ें? Existing data रहेगा.'))return;const names=['Ramesh Demo','Mohan Demo','Suresh Demo','Rajesh Demo'];names.forEach((name,i)=>{const id='VK-DEMO-'+(i+1);if(!worker(id))S.workers.push({id,name,mobile:'',type:i<2?'Reja / Coolie':'Hamal',rate:i<2?500:0,status:'Active',createdAt:now()})});for(const w of S.workers){if(!att(w.id))S.attendance.push({workerId:w.id,date:today(),status:'P',at:now(),by:'Demo'})}log('DEMO_DATA','Demo workers and today attendance added');touch();toast('Demo data added ✓');renderAll()};
+  function vkQuickMenu(){openModal('⚡ Vishwakarmaa Quick Test',`<div class="muted">Real pilot workflows. Data इसी phone पर save होगा.</div><button class="vk-btn vk-primary" onclick="quickAddWorker();closeVKModal()">👷 Register Worker</button><button class="vk-btn vk-primary" onclick="show('attendance');closeVKModal()">📅 Attendance</button><button class="vk-btn vk-primary" onclick="addAdvanceForm('${esc(S.workers[0]?.id||'')}')">💰 Advance</button><button class="vk-btn vk-primary" onclick="addPaymentForm('${esc(S.workers[0]?.id||'')}')">💳 Payment</button><button class="vk-btn vk-primary" onclick="openHamal()">👥 Hamal Work</button><button class="vk-btn vk-primary" onclick="openOrder()">📢 Order</button><button class="vk-btn vk-secondary" onclick="showAudit()">🔐 Audit</button><button class="vk-btn vk-secondary" onclick="backupData()">☁️ Backup</button><button class="vk-btn vk-danger" onclick="reset();closeVKModal()">Reset Pilot</button>`)}
+  window.vkQuickMenu=vkQuickMenu;
+  const tour=[['1 / 5','पहले Worker बनाइए','हर worker को unique VKID मिलेगा। Name, mobile, type और rate save होंगे.'],['2 / 5','Gate / Attendance','Worker आते ही 1-tap Present/Absent करें। बाद में biometric/face integration जुड़ सकता है.'],['3 / 5','काम और हिसाब','Reja/Coolie और Mistri का हिसाब attendance/rate से; Hamal का काम × rate से बनेगा.'],['4 / 5','Advance / Payment','Advance और payment अलग entries हैं। Passbook में earning, advance, payment और balance दिखेगा.'],['5 / 5','Review + Security','Red Flag public blacklist नहीं है। Changes audit में रहेंगे और offline entries pending sync में रहेंगी.']];let ti=0;
+  window.vkStartTour=()=>{ti=0;document.getElementById('vkTour')?.remove();const d=document.createElement('div');d.id='vkTour';d.className='popup';d.innerHTML='<div class="modal"><div class="muted" id="tourStep"></div><h2 id="tourTitle"></h2><p id="tourText"></p><button class="primary" style="width:100%" onclick="vkTourNext()">Next</button><button class="vk-btn vk-secondary" onclick="vkTourClose()">Close</button></div>';document.body.appendChild(d);d.classList.add('show');renderTour()};
+  function renderTour(){const x=tour[ti];document.getElementById('tourStep').textContent=x[0];document.getElementById('tourTitle').textContent=x[1];document.getElementById('tourText').textContent=x[2]};window.vkTourNext=()=>{ti++;if(ti>=tour.length)return vkTourClose();renderTour()};window.vkTourClose=()=>document.getElementById('vkTour')?.remove();
+  function updateHome(){const active=S.workers.filter(w=>w.status!=='Inactive'),employees=active.filter(w=>['Head Mistry','Poha Mistry','Munshi / Manager','Permanent'].includes(w.type)),p=employees.filter(w=>att(w.id)?.status==='P').length;document.querySelectorAll('#home .stat b')[0]?.replaceChildren(document.createTextNode(`${p} / ${employees.length}`));const reja=active.filter(w=>w.type==='Reja / Coolie'),rp=reja.filter(w=>att(w.id)?.status==='P').length;document.querySelectorAll('#home .stat b')[1]?.replaceChildren(document.createTextNode(`${S.hamal.length?Math.min(S.hamal.length,active.filter(w=>w.type==='Hamal').length):0} / ${active.filter(w=>w.type==='Hamal').length}`));document.querySelectorAll('#home .stat b')[2]?.replaceChildren(document.createTextNode(`${rp} / ${reja.length}`));document.querySelectorAll('#home .stat b')[3]?.replaceChildren(document.createTextNode(String(S.redFlags.filter(x=>x.status==='Open').length)))}
+  function updatePeopleCounts(){const active=S.workers.filter(w=>w.status!=='Inactive');const employees=active.filter(w=>['Head Mistry','Poha Mistry','Munshi / Manager','Permanent'].includes(w.type)).length;const reja=active.filter(w=>w.type==='Reja / Coolie').length;const hamal=active.filter(w=>w.type==='Hamal').length;const inactive=S.workers.filter(w=>w.status==='Inactive').length;const cards=document.querySelectorAll('#people .grid .card');if(cards[0])cards[0].querySelector('.big').textContent=active.filter(w=>w.type==='Permanent').length;if(cards[1])cards[1].querySelector('.big').textContent=active.filter(w=>w.type==='Poha Mistri').length;if(cards[2])cards[2].querySelector('.big').textContent=reja;if(cards[3])cards[3].querySelector('.big').textContent=hamal;const e=document.getElementById('peopleEmployeeCount');if(e)e.textContent=employees;const r=document.getElementById('peopleRejaCount');if(r)r.textContent=reja;const h=document.getElementById('peopleHamalCount');if(h)h.textContent=hamal;const i=document.getElementById('peopleInactiveCount');if(i)i.textContent=inactive}
+  function updateHisab(){const d=today();const cards=document.querySelectorAll('#hisab .card');if(cards[0])cards[0].querySelectorAll('b')[1].textContent=money(S.workers.filter(w=>w.type==='Reja / Coolie').reduce((n,w)=>n+earned(w,d),0));if(cards[1])cards[1].querySelectorAll('b')[1].textContent=money(S.workers.filter(w=>w.type==='Poha Mistri').reduce((n,w)=>n+earned(w,d),0));if(cards[2])cards[2].querySelectorAll('b')[1].textContent=money(S.workers.filter(w=>w.type==='Head Mistri'&&w.status!=='Inactive').reduce((n,w)=>n+Number(w.rate||0),0));if(cards[3])cards[3].querySelectorAll('b')[1].textContent=money(S.hamal.filter(x=>x.at.slice(0,10)===d).reduce((n,x)=>n+x.amount,0))}
+  function updateBackup(){const e=document.getElementById('syncStatus');if(e)e.textContent=S.online?(S.pendingSync?`Online · ${S.pendingSync} pending`:'Online · Synced'):`Offline · ${S.pendingSync} pending`}
+  function wireStatic(){
+    // Existing buttons whose old pilot used alert() now get real actions.
+    document.querySelectorAll('#people .action').forEach(b=>{if(b.textContent.includes('नया Worker'))b.onclick=quickAddWorker});
+    const fast=[...document.querySelectorAll('#people .primary')].find(b=>b.textContent.includes('Fast Worker'));if(fast)fast.onclick=quickAddWorker;
+    const adv=[...document.querySelectorAll('#hisab .primary')].find(b=>b.textContent.includes('Advance'));if(adv)adv.onclick=()=>addAdvanceForm(S.workers[0]?.id||'');
+    const more=document.getElementById('more');if(more){more.querySelectorAll('.action').forEach(b=>{const t=b.textContent.trim();if(t.includes('Red Flag'))b.onclick=openRedFlag;else if(t.includes('बदलाव'))b.onclick=showAudit;else if(t.includes('Staff'))b.onclick=roleSheet;else if(t.includes('Settings'))b.onclick=openSettings;else if(t.includes('Backup & Security'))b.onclick=openSettings})}
+    const backupBtn=document.querySelector('#backup button.primary');if(backupBtn)backupBtn.onclick=syncNow;
+  }
+  function openSettings(){openModal('⚙️ Settings',`<div class="card"><b>Current Role</b><div class="muted">${esc(S.role)}</div></div><button class="vk-btn vk-secondary" onclick="openRoleSheet()">Change Role (Pilot)</button><button class="vk-btn vk-secondary" onclick="backupData()">Export Local Backup</button><button class="vk-btn vk-danger" onclick="vkResetPilot()">Clear Pilot Data</button><div class="notice">Production में authentication, server-side permissions, encrypted sync और recovery controls mandatory होंगे.</div>`)}
+  // Native Android pilot bridge. Production authentication/server verification remains future scope.
+  function vkNativeBiometricAvailable(){try{return !!(window.MannatNative&&window.MannatNative.biometricAvailable&&window.MannatNative.biometricAvailable())}catch(e){return false}}
+  function vkNativeBiometric(){try{if(!window.MannatNative||!window.MannatNative.authenticateBiometric)return toast('Native biometric bridge unavailable');const ok=window.MannatNative.authenticateBiometric();toast(ok?'Biometric authentication success ✓':'Biometric authentication started / unavailable');return ok}catch(e){toast('Biometric test unavailable');return false}}
+  function vkCaptureGPS(){if(!navigator.geolocation)return toast('GPS unavailable on this device');navigator.geolocation.getCurrentPosition(p=>{const lat=p.coords.latitude.toFixed(5),lon=p.coords.longitude.toFixed(5);log('GPS_TEST',lat+','+lon);toast('GPS captured ✓ '+lat+', '+lon)},()=>toast('GPS permission/location unavailable'),{enableHighAccuracy:true,timeout:10000,maximumAge:0})}
+  function vkDeviceTest(){const bio=vkNativeBiometricAvailable();openModal('📱 Pilot Device Check',`<div class="list row"><span>Android biometric bridge</span><b class="${bio?'green':'orange'}">${bio?'AVAILABLE':'NOT AVAILABLE'}</b></div><div class="list row"><span>Camera API</span><b>${navigator.mediaDevices?'AVAILABLE':'NOT AVAILABLE'}</b></div><div class="list row"><span>GPS API</span><b>${navigator.geolocation?'AVAILABLE':'NOT AVAILABLE'}</b></div><div class="notice">Pilot mode: local data and app-side checks only. Server-side identity verification is not claimed.</div>${bio?'<button class="vk-btn vk-primary" onclick="vkNativeBiometric()">🔐 Test Biometric</button>':''}<button class="vk-btn vk-secondary" onclick="vkCaptureGPS()">📍 Test GPS</button><button class="vk-btn vk-secondary" onclick="closeVKModal()">Close</button>`)}
+  window.vkDeviceTest=vkDeviceTest; window.vkCaptureGPS=vkCaptureGPS; window.vkNativeBiometric=vkNativeBiometric;
+  function renderAll(){updateStatus();updateHome();updatePeopleCounts();updateHisab();renderPeople(document.querySelector('#people .search')?.value||'');renderAtt();wireStatic();const m=S.mill||{};['millNameView'].forEach(id=>{const e=document.getElementById(id);if(e)e.textContent=m.name||'Mill'});const loc=document.getElementById('millLocationView');if(loc)loc.textContent=m.location||'Location not set';['millIdView','millIdView2','managerMillId'].forEach(id=>{const e=document.getElementById(id);if(e)e.textContent=m.id||'MILL-VK-001'});const role=document.getElementById('currentRoleView');if(role)role.textContent=S.role;const on=document.getElementById('ownerNameView');if(on)on.textContent=m.owner||'Mill Owner';const mn=document.getElementById('managerNameView');if(mn)mn.textContent=m.manager||'Rajesh Manager';const sr=document.getElementById('staffOwnerName');if(sr)sr.textContent=m.owner||'Mill Owner';const sm=document.getElementById('staffManagerName');if(sm)sm.textContent=m.manager||'Rajesh Manager';const mt=document.getElementById('hamalTeamCount');if(mt)mt.textContent=S.hamalTeams.length;}
+  window.openMillEdit=()=>{if(!guard('all'))return;openModal('🏭 Mill Profile Edit',`<div class="vk-field"><label>Mill Name</label><input id="meName" value="${esc(S.mill.name)}"></div><div class="vk-field"><label>Location</label><input id="meLoc" value="${esc(S.mill.location)}"></div><div class="vk-field"><label>Owner Name</label><input id="meOwner" value="${esc(S.mill.owner)}"></div><div class="vk-field"><label>Manager Name</label><input id="meManager" value="${esc(S.mill.manager)}"></div><div class="vk-actions"><button class="vk-btn vk-secondary" onclick="closeVKModal()">Cancel</button><button class="vk-btn vk-primary" onclick="saveMillEdit()">Save</button></div>`)};window.saveMillEdit=()=>{S.mill.name=meName.value.trim()||S.mill.name;S.mill.location=meLoc.value.trim();S.mill.owner=meOwner.value.trim()||S.mill.owner;S.mill.manager=meManager.value.trim()||S.mill.manager;S.users.find(u=>u.role==='Owner').name=S.mill.owner;S.users.find(u=>u.role==='Manager').name=S.mill.manager;log('MILL_PROFILE_UPDATED',S.mill.name);touch();closeVKModal();toast('Mill profile updated ✓');renderAll()};
+window.openSettings=openSettings;window.vkOpenMenu=vkQuickMenu;window.vkDemo=window.vkDemoData;
+  document.title='Project Vishwakarmaa — Real Pilot V41';
+  window.addEventListener('online',()=>{S.online=true;save();if(S.pendingSync)syncNow()});window.addEventListener('offline',()=>{S.online=false;save()});
+  document.addEventListener('DOMContentLoaded',()=>{save();__vkHistory=['home'];try{history.replaceState({vk:'home'},'', '#home')}catch{};renderAll();});
+  if(document.readyState!=='loading'){save();if(!__vkHistory.length){__vkHistory=['home'];try{history.replaceState({vk:'home'},'', '#home')}catch{}}renderAll()}
+})();
+</script>
+</body></html>
